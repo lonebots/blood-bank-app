@@ -1,0 +1,22 @@
+.user-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-login form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+.user-login input {
+  margin: 20px;
+  width: 600px;
+  height: 50px;
+  text-align: center;
+}
+.user-login button {
+  align-self: center;
+  height: 50px;
+  width: 90px;
+  background-color: red;
+}

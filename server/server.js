@@ -10,7 +10,11 @@ var UserLoginHandler = require("./controllers/user/userLoginHandler");
 //employee function handlers
 var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler");
 var EmployeeRegisterHandler = require("./controllers/employee/EmployeeRegisterHandler");
-var UpdateBlood = require("./controllers/employee/updateBlood.js");
+var UpdateBlood = require("./controllers/employee/updateBlood");
+
+//dashboard
+var dashboardHandler=require('./controllers/dashboard/dashboardHandler')
+
 //create the app
 var app = express();
 
@@ -36,7 +40,8 @@ EmployeeRegisterHandler(app,db);
 //EmployeeLoginHandler(app);
 //UpdateBlood(app);
 
-
+//dashboardHandler
+dashboardHandler(app,db);
 
 // db.connect((err) => {
 //   if (!err) {

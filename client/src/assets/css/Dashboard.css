@@ -1,0 +1,6 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    align-items: center;
+}

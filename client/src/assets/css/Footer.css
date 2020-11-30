@@ -1,0 +1,8 @@
+.footer{
+    padding-top:28em;
+    align-items: right;
+    position: fixed;
+}
+.footer a{
+    align-self: flex-end;
+}

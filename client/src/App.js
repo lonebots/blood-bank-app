@@ -7,6 +7,7 @@ import UserLogin from "./components/user/UserLogin";
 import UserRegister from "./components/user/UserRegister";
 import EmployeeLogin from "./components/employee/EmployeeLogin";
 import EmployeRegister from "./components/employee/EmployeeRegister";
+import Footer from "./components/layout/Footer";
 
 import Donate from "./components/layout/Donate";
 
@@ -17,14 +18,14 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Dashboard} />
+     <Route exact path="/home" component={Dashboard} />
         <Route exact path="/donate" component={Donate} />
         <Route exact path="/login/usr" component={UserLogin} />
         <Route exact path="/login/emp" component={EmployeeLogin} />
         <Route exact path="/reg/usr" component={UserRegister} />
         <Route exact path="/reg/emp" component={EmployeRegister} />
-        {/* <Route exact path="/" component={} /> */}
       </Switch>
+      <Footer />
     </div>
   );
 }

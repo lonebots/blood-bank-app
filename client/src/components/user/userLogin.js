@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+//css
+import '../../assets/css/UserLogin.css'
+
 const UserLogin = () => {
   const [userName, setuserName] = useState("");
   const [password, setpasword] = useState("");
@@ -9,7 +12,7 @@ const UserLogin = () => {
   return (
     <div className="user-login">
       <h2>Login</h2>
-      <form className="container">
+      <form>
         <input
           name="username"
           type="text "
