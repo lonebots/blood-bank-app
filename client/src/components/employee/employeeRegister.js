@@ -34,7 +34,7 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempName(e.target.value);
           }}
-        />
+         required/>
         <input
           name="emailId"
           type="text"
@@ -42,7 +42,7 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempMail(e.target.value);
           }}
-        />
+        required/>
         <input
           name="empPhone"
           type="number"
@@ -50,7 +50,7 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempPhone(e.target.value);
           }}
-        />
+        required/>
         <input
           name="empAddress"
           type="text "
@@ -58,7 +58,7 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempAddress(e.target.value);
           }}
-        />
+        required/>
         <input
           name="username"
           type="text "
@@ -70,7 +70,7 @@ const EmployeeRegister = () => {
         <input
           name="password"
           type="text "
-          placeholder="password"
+          placeholder="Password"
           onChange={(e) => {
             setempPassword(e.target.value);
           }}

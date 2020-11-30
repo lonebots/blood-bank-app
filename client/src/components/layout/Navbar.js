@@ -1,26 +1,20 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
-
-import UserLogin from "../user/UserLogin";
-import EmployeeLogin from "../employee/EmployeeLogin";
-import  EmployeRegister from '../employee/EmployeeRegister'
-
+import { Link} from "react-router-dom";
 
 import "../../assets/css/Navbar.css";
-import EmployeeRegister from "../employee/EmployeeRegister";
+
 
 const Navbar = () => {
   return (
-    <nav className="nav.nav-wrapper grey darken -3">
+    <nav className="nav">
       <div className="container">
         <Link to="/" className="bbms">
           BBMS
         </Link>
-        <Link to="/emp/reg/" className="empLogin">RegisterEmp</Link>
+        <a href="/reg" className="empLogin">Register</a>
+        <a href= "/donate" className="donate">Donate</a>
       </div>
-      <Switch>
-        <Route path="/emp/reg" component={EmployeeRegister}/>
-      </Switch>
+    
     </nav>
   );
 };

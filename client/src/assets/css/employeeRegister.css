@@ -3,9 +3,22 @@
     flex-direction:column;
     align-items: center;
     text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .empReg-form{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+}
+.empReg-form input{
+    margin:10px;
+    width: 500px;
+    height: 30px;
+    text-align: left;
+}
+.empReg-form button{
+    width: 70px;
+    height: 30px;
+    align-items: center;
 }
