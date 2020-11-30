@@ -1,8 +1,22 @@
-.footer{
-    padding-top:28em;
-    align-items: right;
-    position: fixed;
+.footer {
+  background-color: rgb(95, 42, 42);
+  align-items: center;
+  vertical-align: center;
+  width: 100%;
+  margin-top: 28em;
+  height: 40px;
+  padding-top: 20px;
 }
-.footer a{
-    align-self: flex-end;
+.footer a {
+  align-self: flex-end;
+  margin-left: 40px;
+  justify-content: center;
+  color: white;
+  margin-top:1em;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: monospace;
+}
+.footer a:hover{
+  color:greenyellow;
 }

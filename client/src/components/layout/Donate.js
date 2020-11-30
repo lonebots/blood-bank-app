@@ -10,12 +10,13 @@ import '../../assets/css/Donate.css'
 const Donate = () => {
   return (
     <div className="donate">
-      <button>
-        <Link to="/reg/usr">Register</Link>
-      </button>
-      <button>
-        <Link to="/login/usr">Login</Link>
-      </button>
+      <Link to="/reg/usr">
+        <button>REGISTER</button>
+      </Link>
+      <Link to="/login/usr">
+        <button>LOGIN</button>
+      </Link>
+
       <Switch>
         <Route path="/reg/usr" component={UserRegister} />
         <Route path="/login/usr" component={UserLogin} />

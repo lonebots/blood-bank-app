@@ -1,6 +1,16 @@
-.dashboard{
-    display: flex;
-    flex-direction: column;
-    padding-top: 5em;
-    align-items: center;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5em;
+  align-items: center;
+  position: relative;
+}
+.dashboard a {
+  margin-left: 40px;
+  justify-content: center;
+  border: 2px dotted white;
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  
 }
