@@ -23,14 +23,14 @@ const Dashboard = () => {
     <div className="dashboard">
       <h1>BLOOD STOCK</h1>
     
-      <table id="blood-table">
+      <table className="blood-table">
         <thead>
           <tr>
             <th>Blood Group</th>
-            <th>Unit Available</th>
+            <th>Unit </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {bloodTable.map((val) => {
             return (
               <tr key={val.b_id}>

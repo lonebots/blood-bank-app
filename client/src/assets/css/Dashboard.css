@@ -1,9 +1,8 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  padding-top: 5em;
+  padding-top: 3em;
   align-items: center;
-  position: relative;
 }
 .dashboard a {
   margin-left: 40px;
@@ -12,5 +11,30 @@
   color: white;
   font-size: 20px;
   font-family: monospace;
-  
+}
+.dashboard h1 {
+  font-family: monospace;
+  font-size: 45px;
+  color: rgb(165, 59, 59);
+}
+
+.blood-table th {
+  font-size: 25px;
+  font-family: monospace;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: rgb(51, 17, 11);
+}
+.blood-table td {
+  font-size: 20px;
+  font-family: monospace;
+  border: 2px solid black;
+  text-align: center;
+}
+.blood-table td:hover {
+  font-size: 20px;
+  font-family: monospace;
+  border: 2px solid rgb(165, 59, 59);
+  text-align: center;
+  color: rgb(102, 35, 170);
 }

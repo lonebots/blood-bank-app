@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
+//css
+import '../../assets/css/EmployeeLogin.css'
+
 const EmployeeLogin = () => {
   const [empUserName, setempUsername] = useState("");
   const [empPassword, setempPassword] = useState("");
 
   return (
     <div className="emp-login">
-      <h2>Login</h2>
-      <form className="container">
+      <h2>LOGIN</h2>
+      <form >
         <input
           name="username"
           type="text "

@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  margin: 6em;
+  margin-top: 12.5em;
 }
 .donate button {
-  margin: 26px;
+  margin: 20px;
   height: 80px;
   width: 150px;
   font-size: 18px;
