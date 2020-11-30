@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
-const userLogin = ()=>{
+const UserLogin = () => {
+  const [userName, setuserName] = useState("");
+  const [password, setpasword] = useState("");
 
-}
+  const userLoginSubmit = () => {};
 
-export default userLogin;
+  return (
+    <div className="user-login">
+      <h2>Login</h2>
+      <form className="container">
+        <input
+          name="username"
+          type="text "
+          placeholder="User Name"
+          onChange={(e) => {
+            setuserName(e.target.value);
+          }}
+        />
+        <input
+          name="password"
+          type="text "
+          placeholder="password"
+          onChange={(e) => {
+            setpasword(e.target.value);
+          }}
+        />
+        <button onClick={userLoginSubmit}>Submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default UserLogin;

@@ -1,22 +1,24 @@
-import React from "react"
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Navbar from './components/navbar/Navbar'
+import Navbar from "./components/layout/Navbar";
+import Dashboard from "./components/layout/Dashboard";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <switch>
-        {/* <Route exact path="/" component={} />
-        <Route exact path="/" component={} />
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+        {/*<Route exact path="/" component={} />
         <Route exact path="/" component={} />
         <Route exact path="/" component={} />
         <Route exact path="/" component={} />
         <Route exact path="/" component={} />
         <Route exact path="/" component={} /> */}
-      </switch>
+      </Switch>
     </div>
   );
 }
