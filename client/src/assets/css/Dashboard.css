@@ -38,3 +38,10 @@
   text-align: center;
   color: rgb(102, 35, 170);
 }
+
+.dashboard img{
+  width: 70%;
+
+  height: 150px;
+  margin-top: 1em;
+}

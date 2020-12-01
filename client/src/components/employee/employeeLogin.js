@@ -9,7 +9,7 @@ const EmployeeLogin = () => {
 
   return (
     <div className="emp-login">
-      <h2>LOGIN</h2>
+      <h2>EMPLOYEE LOGIN</h2>
       <form >
         <input
           name="username"

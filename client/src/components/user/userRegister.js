@@ -2,34 +2,56 @@ import React,{useState,useEffect} from 'react'
 import Axios from 'axios'
 
 const UserRegister=()=>{
-  const [empUserName, setempUsername] = useState("");
-  const [empPassword, setempPassword] = useState("");
-  const [empName, setempName] = useState("");
-  const [empMail, setempMail] = useState("");
-  const [empPhone, setempPhone] = useState("");
-  const [empAddress, setempAddress] = useState("");
+  const [userUserName, setuserUsername] = useState("");
+  const [userPassword, setuserPassword] = useState("");
+  const [userFName, setuserFName] = useState("");
+  const [userMail, setuserMail] = useState("");
+  const [userPhone, setuserPhone] = useState("");
+  const [userAddress, setuserAddress] = useState("");
+  const [userAge,setuserAge]=useState("");
+  const[userGender,setuserGender]=useState("");
 
-  const submitEmployeeRegister = () => {
-    const regurl = "http://localhost:3001/emp/reg";
+  const submituserloyeeRegister = () => {
+    const regurl = "http://localhost:3001/reg/usr";
     Axios.post(regurl, {
-      empName: empName,
-      empMail: empMail,
-      empPhone: empPhone,
-      empAddress: empAddress,
-      empuserName: empUserName,
-      emppasword:empPassword,
+      useFName: userFName,
+      userAge:userAge,
+      userGender:userGender,
+      userMail: userMail,
+      userPhone: userPhone,
+      userAddress: userAddress,
+      userUserName: userUserName,
+      userpasword:userPassword,
     });
   };
     return (
-      <div className="emp-register">
-        <h2>EMP Register</h2>
-        <form className="empReg-form">
+      <div className="user-register">
+        <h2>DONAR REGISTER</h2>
+        <form className="userReg-form">
           <input
-            name="empName"
+            name="userFName"
             type="text "
             placeholder="Full Name"
             onChange={(e) => {
-              setempName(e.target.value);
+              setuserFName(e.target.value);
+            }}
+            required
+          />
+          <input
+            name="userAge"
+            type="text "
+            placeholder="Age"
+            onChange={(e) => {
+              setuserAge(e.target.value);
+            }}
+            required
+          />
+          <input
+            name="userGender"
+            type="text "
+            placeholder="Gender(M/F)"
+            onChange={(e) => {
+              setuserGender(e.target.value);
             }}
             required
           />
@@ -38,25 +60,25 @@ const UserRegister=()=>{
             type="text"
             placeholder="Email Address"
             onChange={(e) => {
-              setempMail(e.target.value);
+              setuserMail(e.target.value);
             }}
             required
           />
           <input
-            name="empPhone"
+            name="userPhone"
             type="number"
             placeholder="Phone Number"
             onChange={(e) => {
-              setempPhone(e.target.value);
+              setuserPhone(e.target.value);
             }}
             required
           />
           <input
-            name="empAddress"
+            name="userAddress"
             type="text "
             placeholder="Address"
             onChange={(e) => {
-              setempAddress(e.target.value);
+              setuserAddress(e.target.value);
             }}
             required
           />
@@ -65,7 +87,7 @@ const UserRegister=()=>{
             type="text "
             placeholder="User Name"
             onChange={(e) => {
-              setempUsername(e.target.value);
+              setuserUsername(e.target.value);
             }}
           />
           <input
@@ -73,10 +95,10 @@ const UserRegister=()=>{
             type="text "
             placeholder="Password"
             onChange={(e) => {
-              setempPassword(e.target.value);
+              setuserPassword(e.target.value);
             }}
           />
-          <button onClick={submitEmployeeRegister}>Register</button>
+          <button onClick={submituserloyeeRegister}>REGISTER</button>
         </form>
       </div>
     );

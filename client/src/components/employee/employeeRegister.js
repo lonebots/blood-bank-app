@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 
-import '../../assets/css/employeeRegister.css'
+import "../../assets/css/employeeRegister.css";
 
 const EmployeeRegister = () => {
   const [empUserName, setempUsername] = useState("");
@@ -12,15 +12,19 @@ const EmployeeRegister = () => {
   const [empAddress, setempAddress] = useState("");
 
   const submitEmployeeRegister = () => {
-    const regurl = "http://localhost:3001/emp/reg";
+    
+    //post-url
+    const regurl = "http://localhost:3001/reg/emp";
+    //post-req
     Axios.post(regurl, {
       empName: empName,
       empMail: empMail,
       empPhone: empPhone,
       empAddress: empAddress,
-      empuserName: empUserName,
-      emppasword:empPassword,
-    });
+      empUserName: empUserName,
+      empPassword: empPassword,
+    })
+    alert("successfully inserted!")
   };
 
   return (
@@ -34,7 +38,8 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempName(e.target.value);
           }}
-         required/>
+          required
+        />
         <input
           name="emailId"
           type="text"
@@ -42,7 +47,8 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempMail(e.target.value);
           }}
-        required/>
+          required
+        />
         <input
           name="empPhone"
           type="number"
@@ -50,7 +56,8 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempPhone(e.target.value);
           }}
-        required/>
+          required
+        />
         <input
           name="empAddress"
           type="text "
@@ -58,10 +65,11 @@ const EmployeeRegister = () => {
           onChange={(e) => {
             setempAddress(e.target.value);
           }}
-        required/>
+          required
+        />
         <input
           name="username"
-          type="text "
+          type="text"
           placeholder="User Name"
           onChange={(e) => {
             setempUsername(e.target.value);

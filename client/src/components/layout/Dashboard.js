@@ -5,6 +5,9 @@ import Axios from "axios";
 //css
 import '../../assets/css/Dashboard.css';
 
+//background image
+import bfImg from '../../assets/img/bg.png'
+
 const Dashboard = () => {
   //array of blood unit availbility
   const [bloodTable, setbloodTable] = useState([]);
@@ -22,7 +25,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <h1>BLOOD STOCK</h1>
-    
+
       <table className="blood-table">
         <thead>
           <tr>
@@ -30,7 +33,7 @@ const Dashboard = () => {
             <th>Unit </th>
           </tr>
         </thead>
-        <tbody >
+        <tbody>
           {bloodTable.map((val) => {
             return (
               <tr key={val.b_id}>
@@ -41,6 +44,7 @@ const Dashboard = () => {
           })}
         </tbody>
       </table>
+      {/* <img src={bfImg} alt="bg"/>*/}
     </div>
   );
 };
