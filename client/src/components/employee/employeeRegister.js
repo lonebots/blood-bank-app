@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 
-import "../../assets/css/employeeRegister.css";
+import "../../assets/css/EmployeeRegister.css";
 
 const EmployeeRegister = () => {
   const [empUserName, setempUsername] = useState("");

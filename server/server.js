@@ -2,16 +2,16 @@ var mysql = require("mysql");
 var express = require("express");
 var bodyParser = require("body-parser");
 var cors = require("cors");
-//Svar popups = require('popups')
 
 //controllers
 //user function handlers
 var UserLoginHandler = require("./controllers/user/userLoginHandler");
+var UserRegisterHandler=require("./controllers/user/UserRegisterHandler");
 
 //employee function handlers
 var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler");
 var EmployeeRegisterHandler = require("./controllers/employee/EmployeeRegisterHandler");
-var UpdateBlood = require("./controllers/employee/updateBlood");
+var UpdateBlood = require("./controllers/bloodbank/UpdateStockHandler");
 
 //dashboard
 var dashboardHandler=require('./controllers/dashboard/dashboardHandler')
@@ -34,7 +34,8 @@ var db = mysql.createPool({
 });
 
 //user functionalities
-//UserLoginHandler(app);
+UserRegisterHandler(app,db);
+UserLoginHandler(app,db);
 
 //employee functionalities
 EmployeeRegisterHandler(app,db);

@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
+import Axios from 'axios'
 
 //css
 import '../../assets/css/UserLogin.css'
 
 const UserLogin = () => {
-  const [userName, setuserName] = useState("");
-  const [password, setpasword] = useState("");
+  const [userUserName, setuserUserName] = useState("");
+  const [userPassword, setuserPassword] = useState("");
 
-  const userLoginSubmit = () => {};
+  const userLoginCheck = () => {
+    Axios.post("/login/usr/",{
+      userUserName:userUserName,
+      userPassword:userPassword,
+    }).then((response)=>{
+      console.log(response);
+    })
+  };
 
   return (
     <div className="user-login">
@@ -18,7 +26,7 @@ const UserLogin = () => {
           type="text "
           placeholder="User Name"
           onChange={(e) => {
-            setuserName(e.target.value);
+            setuserUserName(e.target.value);
           }}
         />
         <input
@@ -26,10 +34,10 @@ const UserLogin = () => {
           type="text "
           placeholder="password"
           onChange={(e) => {
-            setpasword(e.target.value);
+            setuserPassword(e.target.value);
           }}
         />
-        <button onClick={userLoginSubmit}>Submit</button>
+        <button onClick={userLoginCheck}>Submit</button>
       </form>
     </div>
   );
