@@ -6,7 +6,7 @@ import Axios from "axios";
 import '../../assets/css/Dashboard.css';
 
 //background image
-import bfImg from '../../assets/img/bg.png'
+//import bfImg from '../../assets/img/bg.png'
 
 const Dashboard = () => {
   //array of blood unit availbility

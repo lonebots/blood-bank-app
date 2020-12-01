@@ -42,14 +42,16 @@ module.exports = (app, db) => {
             [user_id, userUserName, userPassword],
             (err, result1) => {
               if (err) {
-                console.log(err);
+                console.log(err + "**ERROR INSERTING TO USER-LOGIN**");
                 db.query(sqlDelete, [user_id], (err, result2) => {
                   if (err) console.log(err);
                   else {
-                    console.log("hi");
+                    console.log("**DELETED DUE TO DUPLICATION**");
+                    //res.send({ userLoginStatus: "username already exist" });
                   }
                 });
               } else {
+                //res.send({ userLoginStatus: "User Registration Successfull!" });
                 console.log("**USER REGISTRATION SUCCESSFULL**");
               }
             }

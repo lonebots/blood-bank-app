@@ -27,7 +27,11 @@ const UserRegister = () => {
       userPlace: userPlace,
       userUserName: userUserName,
       userPassword: userPassword,
-    });
+    }).then(
+      (response)=>{
+        alert(response.data.userLoginStatus);
+      }
+    )
   };
 
   return (

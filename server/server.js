@@ -5,7 +5,7 @@ var cors = require("cors");
 
 //controllers
 //user function handlers
-var UserLoginHandler = require("./controllers/user/userLoginHandler");
+var UserLoginHandler = require("./controllers/user/UserLoginHandler");
 var UserRegisterHandler=require("./controllers/user/UserRegisterHandler");
 
 //employee function handlers
@@ -42,16 +42,9 @@ EmployeeRegisterHandler(app,db);
 //EmployeeLoginHandler(app);
 //UpdateBlood(app);
 
-//dashboardHandler
+//bloodbank functionalities
 dashboardHandler(app,db);
-
-// db.connect((err) => {
-//   if (!err) {
-//     console.log("connected");
-//   } else {
-//     console.log("connection failed!");
-//   }
-// });
+UpdateBlood(app,db);
 
 //listening the port
 app.listen(3001, (err) => {

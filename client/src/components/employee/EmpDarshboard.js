@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
+//css
+import '../../assets/css/EmpDashboard.css'
+
 const EmpDashBoard = () => {
   return (
     <div className="emp-dashboard">
       <a href="/login/emp/uh">
-        <button>Update Health</button>
+        <button>UPADATE HEALTH</button>
       </a>
       <a href="/login/emp/ub">
-        <button>Update Blood Stock</button>
+        <button>UPDATE BLOOD STOCK</button>
       </a>
     </div>
   );

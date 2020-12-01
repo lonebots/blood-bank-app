@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Axios from 'axios'
 
 //css
@@ -9,22 +9,28 @@ const UserLogin = () => {
   const [userPassword, setuserPassword] = useState("");
 
   const userLoginCheck = () => {
-    Axios.post("/login/usr/",{
-      userUserName:userUserName,
-      userPassword:userPassword,
-    }).then((response)=>{
-      console.log(response);
-    })
+    Axios.post("http://localhost:3001/login/usr", {
+      userUserName: userUserName,
+      userPassword: userPassword,
+    }).then((response) => {
+      if(response.data.message){
+        alert(response.data.message)
+      }
+      else{
+        alert("Welcome!")
+      }
+
+    });
   };
 
   return (
     <div className="user-login">
-      <h2>Login</h2>
+      <h2>USER LOGIN</h2>
       <form>
         <input
           name="username"
           type="text "
-          placeholder="User Name"
+          placeholder="username"
           onChange={(e) => {
             setuserUserName(e.target.value);
           }}
