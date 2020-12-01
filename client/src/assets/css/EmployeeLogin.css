@@ -19,10 +19,29 @@
     width: 80px;
     height: 30px;
     align-self: center;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.emp-login button:hover{
+    color: white;
+    background-color: black;
+    outline: none;
 }
 
 .emp-login input{
     width: 400px;
     height: 30px;
     margin:10px;
+    text-align: center;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.emp-login input:focus{
+    outline: none;
 }

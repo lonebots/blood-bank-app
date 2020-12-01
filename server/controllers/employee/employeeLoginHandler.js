@@ -14,6 +14,7 @@ module.exports = (app, db) => {
     //
     db.query(sqlSelect, [userName, password], (err, result) => {
       if (err) {
+        console.log(err);
         console.log("***ERROR IN SQL QUERY*");
       }
 
@@ -22,7 +23,7 @@ module.exports = (app, db) => {
         res.send(result);
         console.log("**DATA SEND TO FRON-END**");
       } else {
-        res.send({ empLoginStatus: "Invalid username/password combination!" });
+        res.send({ message: "Invalid username/password combination!" });
         console.log("**INVALID EMPLOYEE DETAILS**");
       }
     });

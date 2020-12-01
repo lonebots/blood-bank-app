@@ -11,14 +11,15 @@
   width: 150px;
   font-size: 18px;
   font-family: monospace;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
 }
 .donate button:hover {
   text-decoration: none;
   background-color: black;
   color: white;
+  outline: noe;
 }

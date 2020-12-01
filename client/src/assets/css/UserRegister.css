@@ -3,8 +3,7 @@
     flex-direction:column;
     align-items: center;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    font-family:monospace;}
 .userReg-form{
     display: flex;
     flex-direction: column;
@@ -12,15 +11,31 @@
     align-items: center;
 }
 .userReg-form input{
-    margin:10px;
+    margin:5px;
     width: 500px;
     height: 30px;
-    text-align: left;
+   padding-left: 1em;
+    border-radius: 30pxd;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
+.userReg-form input:focus{
+    outline:none;
+    content: none;
+}
+
 .userReg-form button{
     width: 90px;
     height: 30px;
     align-items: center;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    outline: none;
 }
 .userReg-form button:hover{
     color:white;

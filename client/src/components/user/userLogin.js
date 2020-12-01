@@ -17,7 +17,7 @@ const UserLogin = () => {
         alert(response.data.message)
       }
       else{
-        alert("Welcome!")
+        alert("WELCOME!")
       }
 
     });
@@ -34,7 +34,7 @@ const UserLogin = () => {
           onChange={(e) => {
             setuserUserName(e.target.value);
           }}
-        />
+        required/>
         <input
           name="password"
           type="text "
@@ -42,7 +42,7 @@ const UserLogin = () => {
           onChange={(e) => {
             setuserPassword(e.target.value);
           }}
-        />
+        required/>
         <button onClick={userLoginCheck}>Submit</button>
       </form>
     </div>

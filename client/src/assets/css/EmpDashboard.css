@@ -17,8 +17,9 @@
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
-.emp-dashboard button:hover {
+.emp-dashboard button:hover:focus {
   text-decoration: none;
   background-color: black;
   color: white;
+  outline: none;
 }
