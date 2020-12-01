@@ -39,7 +39,7 @@ UserLoginHandler(app,db);
 
 //employee functionalities
 EmployeeRegisterHandler(app,db);
-//EmployeeLoginHandler(app);
+EmployeeLoginHandler(app,db);
 //UpdateBlood(app);
 
 //bloodbank functionalities

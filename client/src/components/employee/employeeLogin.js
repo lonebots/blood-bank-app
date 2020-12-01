@@ -1,11 +1,28 @@
 import React, { useState } from "react";
-
+import Axios from 'axios'
 //css
 import '../../assets/css/EmployeeLogin.css'
+
+
+
 
 const EmployeeLogin = () => {
   const [empUserName, setempUsername] = useState("");
   const [empPassword, setempPassword] = useState("");
+
+const empLoginCheck=()=>{
+  Axios.post('http://localhost/login/emp',{
+    empUserName:empUserName,
+    empPassword:empPassword
+  }).then((response)=>{
+    if(response.data.empLoginStatus){
+      alert(response.data.empLoginStatus);
+    }else{
+      alert("WELCOME!");
+    }
+  })
+}
+
 
   return (
     <div className="emp-login">
@@ -27,7 +44,7 @@ const EmployeeLogin = () => {
             setempPassword(e.target.value);
           }}
         />
-        <button>Submit</button>
+        <button onClick={empLoginCheck}>Submit</button>
       </form>
     </div>
   );
