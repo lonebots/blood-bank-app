@@ -1,0 +1,35 @@
+.table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.table-header h2{
+  display: flex;
+  font-family: monospace;
+  padding-left: 2em;
+  padding-right:3em ;
+}
+.table-content input {
+  width: 50px;
+  height: 20px; 
+  display: inline;
+  padding-right: 2em;
+}
+.table-content {
+  margin-left: 4em;
+  margin:20px;
+  text-align: center;
+}
+.value{
+  display: inline;
+  margin-left: 4em ;
+  padding-right: 4em;
+  text-align: auto;
+  font-family: monospace;
+  font-size: large;
+  border: 2px solid rgb(177, 177, 177);
+  margin-right: 1em;
+}
+.row{
+  margin: 15px
+}

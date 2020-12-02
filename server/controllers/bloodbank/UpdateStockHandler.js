@@ -17,16 +17,13 @@ module.exports = (app, db) => {
     //variables
     const unitUpdate = req.body.unitUpdate;
     const b_id = req.body.b_id;
-    
     //query
     const sqlUpdate ="UPDATE blood_stocks SET unit=? WHERE b_id= ?;"
-
     //
     db.query(sqlUpdate,[unitUpdate,b_id],(err,result)=>{
      // res.send(result);
      if(err){console.log("**ERROR IN UPDATING UNIT VALUE**"+ err)}
     })
-
   })
 
 };

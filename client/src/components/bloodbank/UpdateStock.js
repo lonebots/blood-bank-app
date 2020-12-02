@@ -1,6 +1,10 @@
 import Axios from "axios";
 import React, { useState, useEffect } from "react";
 
+//css 
+import "../../assets/css/UpdateStock.css"
+
+
 const UpdateStock = () => {
   //variables
   const [unitUpdate, setunitUpdate] = useState(0);
@@ -18,32 +22,36 @@ const UpdateStock = () => {
   });
   //updateBloodStock
   const ubStock = (b_id) => {
-    Axios.put("http://localhost:3001/login/emp/ub/update",{
-      b_id:b_id,
-      unitUpdate:unitUpdate,
+    Axios.put("http://localhost:3001/login/emp/ub/update", {
+      b_id: b_id,
+      unitUpdate: unitUpdate,
     }).then(setunitUpdate(""));
   };
   return (
     <div className="dashboard">
       <h1>UPDATE BLOOD STOCK</h1>
-
-      <div className="thead">
-        <h2>Blood Group</h2>
-        <h2>Unit </h2>
+      <div className="table-header">
+        <h2>BLOOD GROUP</h2>
+        <h2>UNIT</h2>
       </div>
-
-      {bloodTable.map((val) => {
-        return (
-          <div key={val.b_id}>
-            {val.blood_group}
-            {val.unit}
-            <input type="number" onChange={(e)=>{setunitUpdate(e.target.value)}} />
-            <button onClick={()=>ubStock(val.b_id)}>UPDATE</button>
-          </div>
-        );
-      })}
+      <div className="table-content">
+        {bloodTable.map((val) => {
+          return (
+            <div className="row" key={val.b_id}>
+              <div className="value">{val.blood_group}</div>
+              <div className="value">{val.unit}</div>
+              <input
+                type="number"
+                onChange={(e) => {
+                  setunitUpdate(e.target.value);
+                }}
+              />
+              <button onClick={() => ubStock(val.b_id)}>UPDATE</button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
-
 export default UpdateStock;
