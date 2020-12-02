@@ -30,27 +30,32 @@ const UpdateStock = () => {
   return (
     <div className="dashboard">
       <h1>UPDATE BLOOD STOCK</h1>
-      <div className="table-header">
-        <h2>BLOOD GROUP</h2>
-        <h2>UNIT</h2>
-      </div>
-      <div className="table-content">
-        {bloodTable.map((val) => {
-          return (
-            <div className="row" key={val.b_id}>
-              <div className="value">{val.blood_group}</div>
-              <div className="value">{val.unit}</div>
-              <input
-                type="number"
-                onChange={(e) => {
-                  setunitUpdate(e.target.value);
-                }}
-              />
-              <button onClick={() => ubStock(val.b_id)}>UPDATE</button>
-            </div>
-          );
-        })}
-      </div>
+  
+      <table className="update-blood-table">
+        <thead>
+          <tr>
+            <th>Blood Group</th>
+            <th>Unit </th>
+          </tr>
+        </thead>
+        <tbody>
+          {bloodTable.map((val) => {
+            return (
+              <tr key={val.b_id}>
+                <td>{val.blood_group}</td>
+                <td>{val.unit}</td>
+                <input
+                  type="number"
+                  onChange={(e) => {
+                    setunitUpdate(e.target.value);
+                  }}
+                />
+                <button onClick={() => ubStock(val.b_id)}>UPDATE</button>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };

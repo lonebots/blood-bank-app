@@ -11,7 +11,7 @@
     align-items: center;
 }
 .userReg-form input{
-    margin:5px;
+    margin:2px;
     width: 500px;
     height: 30px;
    padding-left: 1em;
@@ -31,6 +31,7 @@
     height: 30px;
     align-items: center;
     border-radius: 30px;
+    margin-top: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;

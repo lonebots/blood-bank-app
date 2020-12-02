@@ -3,7 +3,8 @@
     flex-direction:column;
     align-items: center;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:monospace;
+    padding-top: 20px;
 }
 .empReg-form{
     display: flex;
@@ -20,5 +21,6 @@
 .empReg-form button{
     width: 90px;
     height: 30px;
+    margin-top: 30px;
     align-items: center;
 }

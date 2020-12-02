@@ -1,9 +1,9 @@
 .footer {
-  background-color: rgb(95, 42, 42);
+  background-color:transparent;
   align-items: center;
   vertical-align: center;
   width: 100%;
-  margin-top: 23em;
+  margin-top: 21em;
   height: 40px;
   padding-top: 18px;
 }

@@ -1,0 +1,39 @@
+.search {
+  padding-left: 10em;
+  float: right;
+ 
+}
+.search input {
+  width: 200px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 5px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  outline: none;
+  outline-style: none;
+  outline-width: none;
+  text-align: center;
+  
+}
+.search button {
+  width: 38px;
+  height: 38px; 
+}
+
+.search select {
+  height: 37px;
+  width: 24px;
+  text-emphasis: emphasi;
+  margin-right: 7px;
+  align-self: center;
+}
+.search option{
+    width: 30px;
+
+}
+.search option{
+    color:rebeccapurple
+}

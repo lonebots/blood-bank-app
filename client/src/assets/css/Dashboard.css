@@ -1,17 +1,10 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  padding-top: 3em;
+  padding-top: 50px;
   align-items: center;
 }
-.dashboard a {
-  margin-left: 40px;
-  justify-content: center;
-  border: 2px dotted white;
-  color: white;
-  font-size: 20px;
-  font-family: monospace;
-}
+
 .dashboard h1 {
   font-family: monospace;
   font-size: 45px;

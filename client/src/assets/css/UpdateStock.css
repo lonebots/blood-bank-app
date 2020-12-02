@@ -1,35 +1,40 @@
-.table-header {
+.dashboard {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
 }
-.table-header h2{
-  display: flex;
+
+.dashboard h1 {
   font-family: monospace;
-  padding-left: 2em;
-  padding-right:3em ;
+  font-size: 45px;
+  color: rgb(165, 59, 59);
 }
-.table-content input {
-  width: 50px;
-  height: 20px; 
-  display: inline;
-  padding-right: 2em;
+
+.update-blood-table th {
+  font-size: 25px;
+  font-family: monospace;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: rgb(51, 17, 11);
 }
-.table-content {
-  margin-left: 4em;
-  margin:20px;
+.update-blood-table td {
+  font-size: 20px;
+  font-family: monospace;
+  border: 2px solid black;
   text-align: center;
 }
-.value{
-  display: inline;
-  margin-left: 4em ;
-  padding-right: 4em;
-  text-align: auto;
-  font-family: monospace;
-  font-size: large;
-  border: 2px solid rgb(177, 177, 177);
-  margin-right: 1em;
+.update-blood-table input{
+ height: 40px;
+ width: 60px;
+ -webkit-appearance: none;
+ align-items: center;
 }
-.row{
-  margin: 15px
+.update-blood-table button{
+  height: 45px;
+  width: auto;
+}
+.update-blood-table button:hover{
+  color: white;
+  background-color: black;
 }

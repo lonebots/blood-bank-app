@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, useParams } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import Dashboard from "./components/layout/Dashboard";
@@ -14,11 +14,12 @@ import UpdateStock from './components/bloodbank/UpdateStock'
 import UpdateHealth from './components/bloodbank/UpdateHealth'
 import Donate from "./components/layout/Donate";
 
+//css
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Navbar />
       <Switch>
         <Route exact path="/home" component={Dashboard} />

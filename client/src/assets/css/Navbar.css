@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   flex-direction: row;
-  background-color: grey;
+ background: transparent;
   align-items: center;
   justify-content: left;
   vertical-align: center;
@@ -16,6 +16,11 @@
   font-size: 20px;
   font-family: monospace;
 }
-.nav a:hover{
+.nav a:hover {
   color: rgb(187, 76, 76);
+}
+.nav img {
+  width: 60px;
+  height: 55px;
+  float: left;
 }
