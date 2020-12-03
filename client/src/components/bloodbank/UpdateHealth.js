@@ -6,7 +6,10 @@ import "../../assets/css/UpdateHealth.css";
 const UpdateHealth = () => {
   var [userId, setuserId] = useState("");
   const [searchList, setsearchList] = useState([]);
-  const [data,setdata]=useState("");
+  const [userVitals, setuserVitals] = useState("");
+  const [userHeight, setuserHeight] = useState("");
+  const [userWeight, setuserWeight] = useState("");
+    const [userStatus, setuserStatus] = useState("");
 
   //search for blood
   useEffect(() => {
@@ -17,11 +20,10 @@ const UpdateHealth = () => {
     });
   });
 
-//updateData
-const updateData=()=>{
-
-}
-
+  //updateData
+  const updateUserData = (userId) => {
+    Axios.put('/login/emp/uh')
+  };
 
   //returning
   return (
@@ -50,24 +52,47 @@ const updateData=()=>{
         <tbody>
           {searchList.map((val) => {
             return (
-              <tr key={val.b_id}>
+              <tr key={val.user_id}>
                 <td>{val.userFName}</td>
                 <td>{val.userPhone}</td>
                 <td>{val.userPlace}</td>
                 <td>{val.userBloodGroup}</td>
-                <br />
-                <input
-                  type="number"
-                  onChange={(e) => {
-                    setdata(e.target.value);
-                  }}
-                />
-                <button onClick={() => updateData(val.b_id)}>UPDATE</button>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <form>
+        <input
+          type="text"
+          placeholder="Vitals Status"
+          onChange={(e) => {
+            setuserVitals(e.target.value);
+          }}
+        />
+        <input
+          type="number"
+          placeholder="Vitals Status"
+          onChange={(e) => {
+            setuserHeight(e.target.value);
+          }}
+        />{" "}
+        <input
+          type="number"
+          placeholder="Vitals Status"
+          onChange={(e) => {
+            setuserWeight(e.target.value);
+          }}
+        />{" "}
+        <input
+          type="text"
+          placeholder="Vitals Status"
+          onChange={(e) => {
+            setuserStatus(e.target.value);
+          }}
+        />
+        <button onClick={() => updateUserData(userId)}>UPDATE</button>
+      </form>
     </div>
   );
 };
