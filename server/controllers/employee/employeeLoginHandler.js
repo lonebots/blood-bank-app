@@ -14,17 +14,16 @@ module.exports = (app, db) => {
     //
     db.query(sqlSelect, [userName, password], (err, result) => {
       if (err) {
-        console.log(err);
-        console.log("***ERROR IN SQL QUERY*");
+        res.send({ err: err });
+        console.log("**ERROR**");
       }
-
-      ///
+      /////
       if (result.length > 0) {
         res.send(result);
-        console.log("**DATA SEND TO FRON-END**");
+        console.log("**RESULT SENT TO FRONT END**");
       } else {
-        res.send({ message: "Invalid username/password combination!" });
-        console.log("**INVALID EMPLOYEE DETAILS**");
+        res.send({ message: "wrong username/password combination!" });
+        console.log("**INVALID COMBINATION**");
       }
     });
   });

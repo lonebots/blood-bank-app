@@ -37,7 +37,7 @@ function App() {
         {/* <Route exact path="/search" component={Search} /> */}
         <Route exact path="/home/search/blood" component={Search}/>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

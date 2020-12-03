@@ -1,9 +1,8 @@
-import React, { useState,useEffect } from "react";
-import Axios from 'axios'
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 
 //css
 import "../../assets/css/Search.css";
-
 
 const Search = () => {
   //variables
@@ -12,21 +11,20 @@ const Search = () => {
   const [searchList, setsearchList] = useState([]);
 
   //search for blood
-useEffect(()=>{
-      Axios.post("http://localhost:3001/home/search", {
-        place: place,
-        blood: blood,
-      }).then((response) => {
-        if (response.data.message) {
-          alert(response.data.message);
-        } else {
-          setsearchList(response.data);
-        }
-      });
-    })
+  useEffect(() => {
+    Axios.post("http://localhost:3001/home/search", {
+      place: place,
+      blood: blood,
+    }).then((response) => {
+      if (response.data.message) {
+        //alert(response.data.message);
+      } else {
+        setsearchList(response.data);
+      }
+    });
+  });
 
-
-    //returning
+  //returning
   return (
     <div className="search">
       {" "}
@@ -47,6 +45,7 @@ useEffect(()=>{
             setblood(e.target.value);
           }}
         />
+        {/* <button onClick={()=>useEffect}><i className="fa fa-search"/></button> */}
       </form>
       <table className="blood-table">
         <thead>
@@ -65,8 +64,7 @@ useEffect(()=>{
                 <td>{val.userPhone}</td>
                 <td>{val.userPlace}</td>
                 <td>{val.userBloodGroup}</td>
-                <br/>
-                
+                <br />
               </tr>
             );
           })}

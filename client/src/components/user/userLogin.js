@@ -14,10 +14,11 @@ const UserLogin = () => {
       userPassword: userPassword,
     }).then((response) => {
       if(response.data.message){
-        alert(response.data.message)
+        alert(response.data.message);
       }
       else{
-        alert("WELCOME!")
+        alert("WELCOME!");
+        window.location='/login/usr/dash'
       }
 
     });

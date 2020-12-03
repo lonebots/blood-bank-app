@@ -5,7 +5,7 @@ module.exports = (app, db) => {
     const blood = req.body.blood;
     const place = req.body.place;
     //query
-    console.log(blood + place);
+    //console.log(blood + place);
     const sqlSelect =
       "SELECT * FROM user_details WHERE userBloodGroup = ? OR userPlace = ?";
 

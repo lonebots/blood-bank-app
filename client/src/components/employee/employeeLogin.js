@@ -18,6 +18,7 @@ const EmployeeLogin = () => {
         alert(response.data.message);
       } else {
         alert("WELCOME!");
+        window.location='/login/emp/dash';
       }
     });
   };
