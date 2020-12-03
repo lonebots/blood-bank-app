@@ -29,7 +29,7 @@ const UpdateHealth = () => {
   return (
     <div className="search">
       {" "}
-      <form>
+      <form >
         <input
           type="text"
           placeholder="USER ID"
@@ -43,10 +43,10 @@ const UpdateHealth = () => {
       <table className="blood-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Phone </th>
-            <th>Place</th>
-            <th>BloodGroup</th>
+            <th>NAME</th>
+            <th>PHONE </th>
+            <th>PLACE</th>
+            <th>BLOODGROUP</th>
           </tr>
         </thead>
         <tbody>
@@ -62,31 +62,31 @@ const UpdateHealth = () => {
           })}
         </tbody>
       </table>
-      <form>
+      <form className="updatehealth">
         <input
           type="text"
-          placeholder="Vitals Status"
+          placeholder="VITALS"
           onChange={(e) => {
             setuserVitals(e.target.value);
           }}
         />
         <input
           type="number"
-          placeholder="Vitals Status"
+          placeholder="HEIGHT"
           onChange={(e) => {
             setuserHeight(e.target.value);
           }}
         />{" "}
         <input
           type="number"
-          placeholder="Vitals Status"
+          placeholder="WEIGHT"
           onChange={(e) => {
             setuserWeight(e.target.value);
           }}
         />{" "}
         <input
           type="text"
-          placeholder="Vitals Status"
+          placeholder="DONATION STATUS"
           onChange={(e) => {
             setuserStatus(e.target.value);
           }}

@@ -1,6 +1,7 @@
 .search {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .search form {
   padding-top: 5em;
@@ -9,7 +10,7 @@
 }
 
 .search input {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   width: 200px;
   height: 30px;
   border-radius: 30px;
@@ -32,7 +33,7 @@
 }
 
 .user-table th {
-  font-size: 25px;
+  font-size: 20px;
   font-family: monospace;
   padding-left: 1em;
   padding-right: 1em;
@@ -44,6 +45,7 @@
   font-family: monospace;
   border: 2px solid black;
   text-align: center;
+  margin-top: 2em;
 }
 .user-table td:hover {
   font-size: 20px;
@@ -51,4 +53,18 @@
   border: 2px solid rgb(165, 59, 59);
   text-align: center;
   color: rgb(102, 35, 170);
+}
+
+.updatehealth{
+  display: flex;
+  flex-direction: column;
+  }
+
+.updatehealth button{
+  width: 5em;
+  justify-self: center;
+}
+
+.updatehealth input{
+  width: 10em;
 }
