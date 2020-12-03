@@ -1,9 +1,15 @@
 .search {
-  padding-left: 10em;
-  float: right;
- 
+  display:flex;
+  flex-direction: column;
 }
+.search form{
+  padding-top: 5em;
+  display:flex;
+  align-self: center;
+}
+
 .search input {
+  margin-bottom: 4em;
   width: 200px;
   height: 30px;
   border-radius: 30px;
@@ -16,7 +22,6 @@
   outline-style: none;
   outline-width: none;
   text-align: center;
-  
 }
 .search button {
   width: 38px;
@@ -28,17 +33,5 @@
   -o-border-radius: 38px;
 }
 
-.search select {
-  height: 37px;
-  width: 24px;
-  text-emphasis: emphasi;
-  margin-right: 7px;
-  align-self: center;
-}
-.search option{
-    width: 30px;
 
-}
-.search option{
-    color:rebeccapurple
-}
+

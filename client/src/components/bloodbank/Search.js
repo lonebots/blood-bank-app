@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Axios from 'axios'
 
 //css
@@ -13,47 +13,69 @@ const Search = () => {
   const [searchList, setsearchList] = useState([]);
 
   //search for blood
-const searchBlood =()=>{
-    Axios.post("http://localhost:3001/home/search",{
-      place:place,
-      blood:blood,
-    }).then(
-     (response)=>{
-       if(response.data.message){
-         alert(response.data.message)
-       }else{
-         setsearchList(response.data);
-       }
-     }
-    );
-}
- 
-  //returning
-  return (
-    <form className="search">
-      <input
-        type="text"
-        placeholder="PLACE"
-        name="place"
-        onChange={(e) => {
-          setplace(e.target.value);
-        }}
-      />
-      <input
-        type="text"
-        placeholder="BLOOD GROUP"
-        name="bloodGroup"
-        onChange={(e) => {
-          setblood(e.target.value);
-        }}
-      />
+useEffect(()=>{
+      Axios.post("http://localhost:3001/home/search", {
+        place: place,
+        blood: blood,
+      }).then((response) => {
+        if (response.data.message) {
+          alert(response.data.message);
+        } else {
+          setsearchList(response.data);
+        }
+      });
+    })
 
-      <button onClick={searchBlood}>
-        <i className="fa fa-search">
-          <a href="/home/search">s</a>
-        </i>
-      </button>
-    </form>
+
+    //returning
+  return (
+    <div className="search">
+      {" "}
+      <form>
+        <input
+          type="text"
+          placeholder="PLACE"
+          name="place"
+          onChange={(e) => {
+            setplace(e.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="BLOOD GROUP"
+          name="bloodGroup"
+          onChange={(e) => {
+            setblood(e.target.value);
+          }}
+        />
+
+        {/* <button onClick={}>
+          <i className="fa fa-search"></i>
+        </button> */}
+      </form>
+      <table className="blood-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone </th>
+            <th>Place</th>
+            <th>BloodGroup</th>
+          </tr>
+        </thead>
+        <tbody>
+          {searchList.map((val) => {
+            return (
+              <tr key={val.b_id}>
+                <td>{val.userFName}</td>
+                <td>{val.userPhone}</td>
+                <td>{val.userPlace}</td>
+                <td>{val.userBloodGroup}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
