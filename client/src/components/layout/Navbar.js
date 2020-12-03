@@ -1,6 +1,7 @@
 import React from "react";
 import bdrop from "../../assets/img/bdrop.png";
 import Search from "../bloodbank/Search";
+import SearchPage from './SearchPage'
 
 import "../../assets/css/Navbar.css";
 
@@ -12,7 +13,8 @@ const Navbar = () => {
        
       </a>
       <a href="/donate">DONATE</a>
-      <Search />
+      {/* <Search /> */}
+      <SearchPage/>
     </nav>
   );
 };

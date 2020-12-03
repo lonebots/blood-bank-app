@@ -1,5 +1,5 @@
-import React from "react";
-import Axios from "axios";
+import React, { useState } from "react";
+import Axios from 'axios'
 
 //css
 import "../../assets/css/Search.css";
@@ -7,40 +7,51 @@ import "../../assets/css/Search.css";
 import bdrop from "../../assets/img/bdrop.png";
 
 const Search = () => {
+  //variables
+  var [place, setplace] = useState("");
+  var [blood, setblood] = useState("");
+  const [searchList, setsearchList] = useState([]);
+
+  //search for blood
+const searchBlood =()=>{
+    Axios.post("http://localhost:3001/home/search",{
+      place:place,
+      blood:blood,
+    }).then(
+     (response)=>{
+       if(response.data.message){
+         alert(response.data.message)
+       }else{
+         setsearchList(response.data);
+       }
+     }
+    );
+}
+ 
+  //returning
   return (
-    <form class="search">
-      <input type="text" placeholder="PLACE" name="search" />
-      <select name="bloodgroup">
-        <option style={{ color: "red", fontWeight: "bolder" }} value="A+ve">
-          A +ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="A-ve">
-          A -ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="B+ve">
-          B +ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="B-ve">
-          B -ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="AB+ve">
-          AB +ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="AB-ve">
-          AB -ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="O+ve">
-          O +ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="O-ve">
-          O -ve
-        </option>
-        <option style={{ color: "red", fontWeight: "bolder" }} value="PNull">
-          P Null
-        </option>
-      </select>
-      <button type="submit">
-        <i class="fa fa-search"></i>
+    <form className="search">
+      <input
+        type="text"
+        placeholder="PLACE"
+        name="place"
+        onChange={(e) => {
+          setplace(e.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="BLOOD GROUP"
+        name="bloodGroup"
+        onChange={(e) => {
+          setblood(e.target.value);
+        }}
+      />
+
+      <button onClick={searchBlood}>
+        <i className="fa fa-search">
+          <a href="/home/search">s</a>
+        </i>
       </button>
     </form>
   );

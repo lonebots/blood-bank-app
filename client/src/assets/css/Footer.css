@@ -11,11 +11,18 @@
   align-self: flex-end;
   margin-left: 40px;
   justify-content: center;
-  color: white;
+  color: gray;
+  border: 3px solid red;
+  border-radius: 10px;
+  border-spacing: 1em;
   margin-top:1em;
   font-size: 12px;
   text-decoration: none;
   font-family: monospace;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .footer a:hover{
   color:greenyellow;

@@ -20,7 +20,12 @@
 }
 .search button {
   width: 38px;
-  height: 38px; 
+  height: 38px;
+  border-radius: 38px;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+  -ms-border-radius: 38px;
+  -o-border-radius: 38px;
 }
 
 .search select {

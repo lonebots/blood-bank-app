@@ -15,6 +15,7 @@ var UpdateBlood = require("./controllers/bloodbank/UpdateStockHandler");
 
 //dashboard
 var dashboardHandler=require('./controllers/dashboard/dashboardHandler')
+var SearchHandler =require('./controllers/bloodbank/SearchHandler')
 
 //create the app
 var app = express();
@@ -40,11 +41,12 @@ UserLoginHandler(app,db);
 //employee functionalities
 EmployeeRegisterHandler(app,db);
 EmployeeLoginHandler(app,db);
-//UpdateBlood(app);
+
 
 //bloodbank functionalities
 dashboardHandler(app,db);
 UpdateBlood(app,db);
+SearchHandler(app,db);
 
 //listening the port
 app.listen(3001, (err) => {

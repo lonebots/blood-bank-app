@@ -11,13 +11,15 @@
 .nav a {
   margin-left: 40px;
   justify-content: center;
-  color: white;
+  color: gray;
   text-decoration: none;
   font-size: 20px;
   font-family: monospace;
 }
 .nav a:hover {
   color: rgb(187, 76, 76);
+  
+
 }
 .nav img {
   width: 60px;

@@ -8,18 +8,20 @@ import UserRegister from "./components/user/UserRegister";
 import EmployeeLogin from "./components/employee/EmployeeLogin";
 import EmployeRegister from "./components/employee/EmployeeRegister";
 import Footer from "./components/layout/Footer";
-import UserDashboard from './components/user/UserDashboard'
-import EmpDashboard from './components/employee/EmpDarshboard'
-import UpdateStock from './components/bloodbank/UpdateStock'
-import UpdateHealth from './components/bloodbank/UpdateHealth'
+import UserDashboard from "./components/user/UserDashboard";
+import EmpDashboard from "./components/employee/EmpDarshboard";
+import UpdateStock from "./components/bloodbank/UpdateStock";
+import UpdateHealth from "./components/bloodbank/UpdateHealth";
 import Donate from "./components/layout/Donate";
+import Search from "./components/bloodbank/Search";
+import SearchClass from './components/bloodbank/SearchClass'
 
 //css
 import "./App.css";
 
 function App() {
   return (
-    <div >
+    <div>
       <Navbar />
       <Switch>
         <Route exact path="/home" component={Dashboard} />
@@ -32,6 +34,8 @@ function App() {
         <Route exact path="/login/emp/dash" component={EmpDashboard} />
         <Route exact path="/login/emp/ub" component={UpdateStock} />
         <Route exact path="/login/emp/uh" component={UpdateHealth} />
+        {/* <Route exact path="/search" component={Search} /> */}
+        <Route exact path="/home/search" component={Search}/>
       </Switch>
       <Footer />
     </div>
