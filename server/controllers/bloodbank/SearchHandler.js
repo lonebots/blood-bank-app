@@ -17,7 +17,7 @@ module.exports = (app, db) => {
 
       if (result.length > 0) {
         res.send(result);
-        console.log("**SEARCH RESULTS FOUND AND SEND TO FRONT END**");
+        //console.log("**SEARCH RESULTS FOUND AND SEND TO FRONT END**");
       } else {
         res.send({ message: "NO SEARCH RESULTS FOUND!" });
       }

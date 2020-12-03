@@ -35,7 +35,7 @@ function App() {
         <Route exact path="/login/emp/ub" component={UpdateStock} />
         <Route exact path="/login/emp/uh" component={UpdateHealth} />
         {/* <Route exact path="/search" component={Search} /> */}
-        <Route exact path="/home/search" component={Search}/>
+        <Route exact path="/home/search/blood" component={Search}/>
       </Switch>
       <Footer />
     </div>

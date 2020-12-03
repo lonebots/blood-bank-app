@@ -29,7 +29,7 @@ const UserRegister = () => {
       userPassword: userPassword,
     }).then(
       (response)=>{
-        alert(response.data.userLoginStatus);
+        alert(response.data.message);
       }
     )
   };

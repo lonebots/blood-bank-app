@@ -24,7 +24,7 @@ const EmployeeRegister = () => {
       empUserName: empUserName,
       empPassword: empPassword,
     })
-    alert("successfully inserted!")
+    alert("Successfully Registered!")
   };
 
   return (

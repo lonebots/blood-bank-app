@@ -7,6 +7,7 @@ const EmployeeLogin = () => {
   const [empUserName, setempUsername] = useState("");
   const [empPassword, setempPassword] = useState("");
 
+
   //onclick function
   const empLoginCheck = () => {
     Axios.post("http://localhost:3001/login/emp", {
@@ -41,7 +42,7 @@ const EmployeeLogin = () => {
             setempPassword(e.target.value);
           }}
         />
-        <button formAction="/login/emp/ub" onClick={empLoginCheck}>SUBMIT</button>
+        <button formAction="" onClick={empLoginCheck}>SUBMIT</button>
       </form>
     </div>
   );

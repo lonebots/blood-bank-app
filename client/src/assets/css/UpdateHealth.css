@@ -1,0 +1,54 @@
+.search {
+  display: flex;
+  flex-direction: column;
+}
+.search form {
+  padding-top: 5em;
+  display: flex;
+  align-self: center;
+}
+
+.search input {
+  margin-bottom: 4em;
+  width: 200px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 5px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  outline: none;
+  outline-style: none;
+  outline-width: none;
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.user-table th {
+  font-size: 25px;
+  font-family: monospace;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: rgb(51, 17, 11);
+}
+.user-table td {
+  display: inline;
+  font-size: 20px;
+  font-family: monospace;
+  border: 2px solid black;
+  text-align: center;
+}
+.user-table td:hover {
+  font-size: 20px;
+  font-family: monospace;
+  border: 2px solid rgb(165, 59, 59);
+  text-align: center;
+  color: rgb(102, 35, 170);
+}

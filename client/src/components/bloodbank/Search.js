@@ -3,8 +3,7 @@ import Axios from 'axios'
 
 //css
 import "../../assets/css/Search.css";
-//image
-import bdrop from "../../assets/img/bdrop.png";
+
 
 const Search = () => {
   //variables
@@ -48,10 +47,6 @@ useEffect(()=>{
             setblood(e.target.value);
           }}
         />
-
-        {/* <button onClick={}>
-          <i className="fa fa-search"></i>
-        </button> */}
       </form>
       <table className="blood-table">
         <thead>
@@ -70,6 +65,8 @@ useEffect(()=>{
                 <td>{val.userPhone}</td>
                 <td>{val.userPlace}</td>
                 <td>{val.userBloodGroup}</td>
+                <br/>
+                
               </tr>
             );
           })}

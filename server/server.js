@@ -12,6 +12,7 @@ var UserRegisterHandler=require("./controllers/user/UserRegisterHandler");
 var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler");
 var EmployeeRegisterHandler = require("./controllers/employee/EmployeeRegisterHandler");
 var UpdateBlood = require("./controllers/bloodbank/UpdateStockHandler");
+var UpdateHealthHandler= require('./controllers/bloodbank/UpdateHealthHandler')
 
 //dashboard
 var dashboardHandler=require('./controllers/dashboard/dashboardHandler')
@@ -41,6 +42,7 @@ UserLoginHandler(app,db);
 //employee functionalities
 EmployeeRegisterHandler(app,db);
 EmployeeLoginHandler(app,db);
+UpdateHealthHandler(app,db);
 
 
 //bloodbank functionalities

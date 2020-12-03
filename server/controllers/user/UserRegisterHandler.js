@@ -47,11 +47,11 @@ module.exports = (app, db) => {
                   if (err) console.log(err);
                   else {
                     console.log("**DELETED DUE TO DUPLICATION**");
-                    //res.send({ userLoginStatus: "username already exist" });
+                    res.send({ message: "Username already exist" });
                   }
                 });
               } else {
-                //res.send({ userLoginStatus: "User Registration Successfull!" });
+                res.send({ message: "User Registration Successfull!" });
                 console.log("**USER REGISTRATION SUCCESSFULL**");
               }
             }
