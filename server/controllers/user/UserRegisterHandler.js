@@ -52,7 +52,7 @@ module.exports = (app, db) => {
                   if (err) console.log(err);
                   else {
                     console.log("**DELETED DUE TO DUPLICATION**");
-                    res.send({ message: "Username already exist" });
+                   // res.send({ message: "Username already exist" });
                   }
                 });
               } else {
@@ -71,7 +71,7 @@ module.exports = (app, db) => {
                          }
                        });
                      } else {
-                       res.send({ message: "User Registration Successfull!" });
+                       //res.send({ message: "User Registration Successfull!" });
                        console.log("**USER REGISTRATION SUCCESSFULL**");
                      }
                    });

@@ -22,7 +22,15 @@ const UpdateHealth = () => {
 
   //updateData
   const updateUserData = (userId) => {
-    Axios.put('/login/emp/uh')
+    Axios.put('http://localhost:3001/login/emp/uh',{
+      user_id:userId,
+      userVitals:userVitals,
+      userHeight:userHeight,
+      userWeight:userWeight,
+      userStatus:userStatus
+    }).then((response)=>{
+      console.log(response.data)
+    })
   };
 
   //returning
@@ -86,7 +94,7 @@ const UpdateHealth = () => {
         />{" "}
         <input
           type="text"
-          placeholder="DONATION STATUS"
+          placeholder="DONAR STATUS"
           onChange={(e) => {
             setuserStatus(e.target.value);
           }}
