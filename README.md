@@ -6,4 +6,4 @@
  **Backend    - NodeJs** <br/>
  **DataBase   - MySQL** <br/>
 
-
+### Functionality
