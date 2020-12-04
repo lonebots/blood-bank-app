@@ -1,5 +1,4 @@
 # BLOOD BANK MANAGEMNET SYSTEM-Web App
-<hr/>
 
 **Simple Blood Bank Management System implemented as a web application**
 
