@@ -1,5 +1,5 @@
 /*
-            ----blood bank management system---- 
+            ----blood bank management system database schema---- 
 tables:
 1.userdetails-table
 2.user_login
