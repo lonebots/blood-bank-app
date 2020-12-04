@@ -52,33 +52,32 @@ module.exports = (app, db) => {
                   if (err) console.log(err);
                   else {
                     console.log("**DELETED DUE TO DUPLICATION**");
-                   // res.send({ message: "Username already exist" });
+                    // res.send({ message: "Username already exist" });
                   }
                 });
               } else {
                 //res.send({ message: "User Registration Successfull!" });
-              //console.log("**USER REGISTRATION SUCCESSFULL**");
-                ///////  
+                //console.log("**USER REGISTRATION SUCCESSFULL**");
+                ///////
                 db.query(sqlInsert3, [user_id], (err, result1) => {
-                     if (err) {
-                       console.log(err + "**ERROR INSERTING TO USER-LOGIN**");
-                       //////
-                       db.query(sqlDelete2, [user_id], (err, result2) => {
-                         if (err) console.log(err);
-                         else {
-                           console.log("**DELETED DUE TO DUPLICATION**");
-                          // res.send({ message: "Username already exist" });
-                         }
-                       });
-                     } else {
-                       //res.send({ message: "User Registration Successfull!" });
-                       console.log("**USER REGISTRATION SUCCESSFULL**");
-                     }
-                   });
+                  if (err) {
+                    console.log(err + "**ERROR INSERTING TO USER-LOGIN**");
+                    //////
+                    db.query(sqlDelete2, [user_id], (err, result2) => {
+                      if (err) console.log(err);
+                      else {
+                        console.log("**DELETED DUE TO DUPLICATION**");
+                        // res.send({ message: "Username already exist" });
+                      }
+                    });
+                  } else {
+                    //res.send({ message: "User Registration Successfull!" });
+                    console.log("**USER REGISTRATION SUCCESSFULL**");
+                  }
+                });
               }
             }
           );
-       
         }
       }
     );

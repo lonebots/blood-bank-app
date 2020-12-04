@@ -1,5 +1,4 @@
 import React from "react";
-import SearchClass from "../bloodbank/SearchClass";
 
 const SearchPage = () => {
   return (

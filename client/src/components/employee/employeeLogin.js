@@ -7,7 +7,6 @@ const EmployeeLogin = () => {
   const [empUserName, setempUsername] = useState("");
   const [empPassword, setempPassword] = useState("");
 
-
   //onclick function
   const empLoginCheck = () => {
     Axios.post("http://localhost:3001/login/emp", {
@@ -18,7 +17,7 @@ const EmployeeLogin = () => {
         alert(response.data.message);
       } else {
         alert("WELCOME!");
-        window.location='/login/emp/dash';
+        window.location = "/login/emp/dash";
       }
     });
   };
@@ -43,7 +42,9 @@ const EmployeeLogin = () => {
             setempPassword(e.target.value);
           }}
         />
-        <button formAction="" onClick={empLoginCheck}>SUBMIT</button>
+        <button formAction="" onClick={empLoginCheck}>
+          SUBMIT
+        </button>
       </form>
     </div>
   );

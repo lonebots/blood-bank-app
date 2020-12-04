@@ -1,9 +1,8 @@
 import Axios from "axios";
 import React, { useState, useEffect } from "react";
 
-//css 
-import "../../assets/css/UpdateStock.css"
-
+//css
+import "../../assets/css/UpdateStock.css";
 
 const UpdateStock = () => {
   //variables
@@ -30,7 +29,7 @@ const UpdateStock = () => {
   return (
     <div className="dashboard">
       <h1>UPDATE BLOOD STOCK</h1>
-  
+
       <table className="update-blood-table">
         <thead>
           <tr>

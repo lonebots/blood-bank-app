@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 //css
-import "../../assets/css/UserRegister.css"
+import "../../assets/css/UserRegister.css";
 
 const UserRegister = () => {
   const [userUserName, setuserUsername] = useState("");
@@ -27,11 +27,9 @@ const UserRegister = () => {
       userPlace: userPlace,
       userUserName: userUserName,
       userPassword: userPassword,
-    }).then(
-      (response)=>{
-        alert(response.data.message);
-      }
-    )
+    }).then((response) => {
+      alert(response.data.message);
+    });
   };
 
   return (

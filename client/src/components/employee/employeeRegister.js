@@ -12,7 +12,6 @@ const EmployeeRegister = () => {
   const [empAddress, setempAddress] = useState("");
 
   const submitEmployeeRegister = () => {
-    
     //post-url
     const regurl = "http://localhost:3001/reg/emp";
     //post-req
@@ -23,8 +22,8 @@ const EmployeeRegister = () => {
       empAddress: empAddress,
       empUserName: empUserName,
       empPassword: empPassword,
-    })
-    alert("Successfully Registered!")
+    });
+    alert("Successfully Registered!");
   };
 
   return (

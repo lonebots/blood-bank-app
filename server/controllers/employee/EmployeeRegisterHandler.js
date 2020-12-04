@@ -12,13 +12,13 @@ module.exports = (app, db) => {
     const empPassword = req.body.empPassword;
 
     //query
-      const sqlInsert1 =
+    const sqlInsert1 =
       "INSERT INTO emp_details (empName,empMail,empPhone,empAddress) VALUES (?,?,?,?)";
-    
-      const sqlInsert2 =
+
+    const sqlInsert2 =
       "INSERT INTO emp_login (emp_id,userName,password) VALUES (?,?,?)";
-    
-      const sqlDelete = "DELETE  FROM emp_details WHERE emp_id= ?";
+
+    const sqlDelete = "DELETE  FROM emp_details WHERE emp_id= ?";
     //
     db.query(
       sqlInsert1,

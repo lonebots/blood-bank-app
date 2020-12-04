@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Axios from "axios";
+import React from "react";
 
 //css
-import '../../assets/css/EmpDashboard.css'
+import "../../assets/css/EmpDashboard.css";
 
 const EmpDashBoard = () => {
   return (

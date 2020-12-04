@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import Footer from './Footer'
-
+import Footer from "./Footer";
 
 //css
-import '../../assets/css/Dashboard.css';
+import "../../assets/css/Dashboard.css";
 
 //background image
 //import bfImg from '../../assets/img/bg.png'
@@ -46,7 +45,7 @@ const Dashboard = () => {
         </tbody>
       </table>
       {/* <img src={bfImg} alt="bg"/>*/}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

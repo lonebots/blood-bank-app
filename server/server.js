@@ -6,17 +6,17 @@ var cors = require("cors");
 //controllers
 //user function handlers
 var UserLoginHandler = require("./controllers/user/UserLoginHandler");
-var UserRegisterHandler=require("./controllers/user/UserRegisterHandler");
+var UserRegisterHandler = require("./controllers/user/UserRegisterHandler");
 
 //employee function handlers
 var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler");
 var EmployeeRegisterHandler = require("./controllers/employee/EmployeeRegisterHandler");
 var UpdateBlood = require("./controllers/bloodbank/UpdateStockHandler");
-var UpdateHealthHandler= require('./controllers/bloodbank/UpdateHealthHandler')
+var UpdateHealthHandler = require("./controllers/bloodbank/UpdateHealthHandler");
 
 //dashboard
-var dashboardHandler=require('./controllers/dashboard/dashboardHandler')
-var SearchHandler =require('./controllers/bloodbank/SearchHandler')
+var dashboardHandler = require("./controllers/dashboard/dashboardHandler");
+var SearchHandler = require("./controllers/bloodbank/SearchHandler");
 
 //create the app
 var app = express();
@@ -36,19 +36,18 @@ var db = mysql.createPool({
 });
 
 //user functionalities
-UserRegisterHandler(app,db);
-UserLoginHandler(app,db);
+UserRegisterHandler(app, db);
+UserLoginHandler(app, db);
 
 //employee functionalities
-EmployeeRegisterHandler(app,db);
-EmployeeLoginHandler(app,db);
-UpdateHealthHandler(app,db);
-
+EmployeeRegisterHandler(app, db);
+EmployeeLoginHandler(app, db);
+UpdateHealthHandler(app, db);
 
 //bloodbank functionalities
-dashboardHandler(app,db);
-UpdateBlood(app,db);
-SearchHandler(app,db);
+dashboardHandler(app, db);
+UpdateBlood(app, db);
+SearchHandler(app, db);
 
 //listening the port
 app.listen(3001, (err) => {

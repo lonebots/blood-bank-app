@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Axios from 'axios'
+import Axios from "axios";
 
 //css
-import '../../assets/css/UserLogin.css'
+import "../../assets/css/UserLogin.css";
 
 const UserLogin = () => {
   const [userUserName, setuserUserName] = useState("");
@@ -13,14 +13,12 @@ const UserLogin = () => {
       userUserName: userUserName,
       userPassword: userPassword,
     }).then((response) => {
-      if(response.data.message){
+      if (response.data.message) {
         alert(response.data.message);
-      }
-      else{
+      } else {
         alert("WELCOME!");
-        window.location='/login/usr/dash'
+        window.location = "/login/usr/dash";
       }
-
     });
   };
 
@@ -35,7 +33,8 @@ const UserLogin = () => {
           onChange={(e) => {
             setuserUserName(e.target.value);
           }}
-        required/>
+          required
+        />
         <input
           name="password"
           type="text "
@@ -43,7 +42,8 @@ const UserLogin = () => {
           onChange={(e) => {
             setuserPassword(e.target.value);
           }}
-        required/>
+          required
+        />
         <button onClick={userLoginCheck}>Submit</button>
       </form>
     </div>

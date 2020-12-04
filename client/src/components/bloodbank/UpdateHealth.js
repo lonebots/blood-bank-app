@@ -9,7 +9,7 @@ const UpdateHealth = () => {
   const [userVitals, setuserVitals] = useState("");
   const [userHeight, setuserHeight] = useState("");
   const [userWeight, setuserWeight] = useState("");
-    const [userStatus, setuserStatus] = useState("");
+  const [userStatus, setuserStatus] = useState("");
 
   //search for blood
   useEffect(() => {
@@ -22,22 +22,22 @@ const UpdateHealth = () => {
 
   //updateData
   const updateUserData = (userId) => {
-    Axios.put('http://localhost:3001/login/emp/uh',{
-      user_id:userId,
-      userVitals:userVitals,
-      userHeight:userHeight,
-      userWeight:userWeight,
-      userStatus:userStatus
-    }).then((response)=>{
-      console.log(response.data)
-    })
+    Axios.put("http://localhost:3001/login/emp/uh", {
+      user_id: userId,
+      userVitals: userVitals,
+      userHeight: userHeight,
+      userWeight: userWeight,
+      userStatus: userStatus,
+    }).then((response) => {
+      console.log(response.data);
+    });
   };
 
   //returning
   return (
     <div className="search">
       {" "}
-      <form >
+      <form>
         <input
           type="text"
           placeholder="USER ID"

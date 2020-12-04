@@ -5,7 +5,7 @@ import UserRegister from "../user/UserRegister";
 import UserLogin from "../user/UserLogin";
 
 //css
-import '../../assets/css/Donate.css'
+import "../../assets/css/Donate.css";
 
 const Donate = () => {
   return (
