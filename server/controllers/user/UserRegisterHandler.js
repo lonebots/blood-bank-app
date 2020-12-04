@@ -52,7 +52,7 @@ module.exports = (app, db) => {
                   if (err) console.log(err);
                   else {
                     console.log("**DELETED DUE TO DUPLICATION**");
-                    // res.send({ message: "Username already exist" });
+                    res.send({ message: "Username already exist" });
                   }
                 });
               } else {
@@ -67,7 +67,7 @@ module.exports = (app, db) => {
                       if (err) console.log(err);
                       else {
                         console.log("**DELETED DUE TO DUPLICATION**");
-                        // res.send({ message: "Username already exist" });
+                        res.send({ message: "Username already exist" });
                       }
                     });
                   } else {
@@ -81,6 +81,5 @@ module.exports = (app, db) => {
         }
       }
     );
-    res.send("all good!");
   });
 };
