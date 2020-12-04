@@ -8,10 +8,13 @@ const UserDashboard = () => {
     alert("WE WILL GET IN TOUCH WITH YOU!");
   };
 
+  const request =()=>{
+      window.location='/login/usr/dash/req'
+  }
   return (
     <div className="user-dash">
       <button onClick={donate}>DONATE</button>
-      <button>REQUEST</button>
+      <button onClick={request}>REQUEST</button>
     </div>
   );
 };
