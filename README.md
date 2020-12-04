@@ -1,8 +1,8 @@
-# *Blood-Bank-Web App*
+# BLOOD BANK MANAGEMNET SYSTEM
+
+**Simple Blood Bank Management System implemented as a web application**
 <hr/>
 
-***Simple Blood Bank Management System implemented as a web application***
-
-##### ***Frameworks - ReactJs (frontend)***
-##### ***Backend    - NodeJs***
-##### ***DataBase   - MySQL***
+ **Frameworks - ReactJs (frontend)** <br/>
+ **Backend    - NodeJs** <br/>
+ **DataBase   - MySQL** <br/>
