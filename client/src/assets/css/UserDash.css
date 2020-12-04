@@ -1,0 +1,28 @@
+.user-dash{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15em;
+
+
+}
+
+.user-dash button{
+    margin: 1em;
+    height: 90px;
+    width: 240px;
+    align-self: center;
+    font-family:monospace;
+    font-size: 20px;
+    border-radius: 90px;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    -ms-border-radius: 90px;
+    -o-border-radius: 90px;
+    outline: none;
+    
+}
+.user-dash button:hover{
+    background-color: black;
+    color:white;
+    outline: none;
+}
