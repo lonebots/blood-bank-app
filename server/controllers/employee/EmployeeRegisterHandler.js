@@ -2,7 +2,7 @@
 
 //module export
 module.exports = (app, db) => {
-  app.post("reg/emp", (req, res) => {
+  app.post("/reg/emp", (req, res) => {
     //variables
     const empName = req.body.empName;
     const empMail = req.body.empMail;
@@ -19,13 +19,16 @@ module.exports = (app, db) => {
       "INSERT INTO emp_login (emp_id,userName,password) VALUES (?,?,?)";
 
     const sqlDelete = "DELETE  FROM emp_details WHERE emp_id= ?";
-    //
+
+    //s
     db.query(
       sqlInsert1,
       [empName, empMail, empPhone, empAddress],
       (err, result) => {
-        if (err) console.log(err + "erroris");
-        else {
+        if (err) {
+          console.log(err + "THAT'S AN ERROR!!!");
+        } else {
+          console.log("poda patti");
           var emp_id = result.insertId;
           //
           db.query(
@@ -34,6 +37,7 @@ module.exports = (app, db) => {
             (err, result1) => {
               if (err) {
                 //
+                console.log(err);
                 db.query(sqlDelete, [emp_id], (err, result2) => {
                   if (err) console.log(err);
                   else {

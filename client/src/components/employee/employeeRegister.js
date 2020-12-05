@@ -4,6 +4,7 @@ import Axios from "axios";
 import "../../assets/css/EmployeeRegister.css";
 
 const EmployeeRegister = () => {
+
   const [empUserName, setempUsername] = useState("");
   const [empPassword, setempPassword] = useState("");
   const [empName, setempName] = useState("");
@@ -12,6 +13,7 @@ const EmployeeRegister = () => {
   const [empAddress, setempAddress] = useState("");
 
   const submitEmployeeRegister = () => {
+
     //post-url
     const regurl = "http://localhost:3001/reg/emp";
     //post-req
@@ -22,8 +24,11 @@ const EmployeeRegister = () => {
       empAddress: empAddress,
       empUserName: empUserName,
       empPassword: empPassword,
+    }).then((response)=>{
+      console.log(response)
     });
-    alert("Successfully Registered!");
+    
+  
   };
 
   return (
