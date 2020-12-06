@@ -11,10 +11,16 @@ const UserDashboard = () => {
   const request =()=>{
       window.location='/login/usr/dash/req'
   }
+
+  const update=()=>{
+    
+  }
+
   return (
     <div className="user-dash">
       <button onClick={donate}>DONATE</button>
       <button onClick={request}>REQUEST</button>
+      <button on onClick={update}>UPDATE</button>
     </div>
   );
 };
