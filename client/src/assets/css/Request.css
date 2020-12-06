@@ -1,0 +1,51 @@
+.request {
+  font-family: monospace;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7rem;
+}
+
+.request form {
+  display: flex;
+  flex-direction: column
+ 
+}
+
+.request input {
+  margin: 1em;
+  width: 150px;
+  height: 50px;
+  outline: none;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.request select {
+  margin-top: 2em;
+  width: 150px;
+  display: flex;
+  justify-content: right;
+  align-self: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+.request button{
+    margin-top: 2em;
+    width: 100px;
+    height: 60px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    outline: none;
+  align-self: center;
+}
+.request button:hover{
+    color: white;
+    background: black;
+}
