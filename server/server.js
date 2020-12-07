@@ -7,6 +7,7 @@ var cors = require("cors");
 //user function handlers
 var UserLoginHandler = require("./controllers/user/UserLoginHandler");
 var UserRegisterHandler = require("./controllers/user/UserRegisterHandler");
+var RequestClassHandler =require("./controllers/bloodbank/RequestClassHandler")
 
 //employee function handlers
 var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler");
@@ -38,6 +39,7 @@ var db = mysql.createPool({
 //user functionalities
 UserRegisterHandler(app, db);
 UserLoginHandler(app, db);
+RequestClassHandler(app,db);
 
 //employee functionalities
 EmployeeRegisterHandler(app, db);

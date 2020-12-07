@@ -9,7 +9,7 @@ const UserDashboard = () => {
   };
 
   const request =()=>{
-      window.location='/login/usr/dash/req'
+      window.location='/request'
   }
 
   const update=()=>{

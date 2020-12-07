@@ -57,14 +57,13 @@ const Search = () => {
           </tr>
         </thead>
         <tbody>
-          {searchList.map((val) => {
+          {searchList.map((val,i) => {
             return (
-              <tr key={val.b_id}>
+              <tr key={i}>
                 <td>{val.userFName}</td>
                 <td>{val.userPhone}</td>
                 <td>{val.userPlace}</td>
                 <td>{val.userBloodGroup}</td>
-                <br />
               </tr>
             );
           })}
