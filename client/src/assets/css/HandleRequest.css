@@ -1,0 +1,17 @@
+.handle-request{
+    font-family: monospace;
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    padding-top: 6em;
+    font-size: 20px;
+}
+.req-table th{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.req-table td{
+    padding-left: 1em;
+    padding-right: 1em;
+    border:1px solid black;
+}

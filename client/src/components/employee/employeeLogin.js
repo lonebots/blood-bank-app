@@ -42,7 +42,7 @@ const EmployeeLogin = () => {
             setempPassword(e.target.value);
           }}
         />
-        <button formAction="" onClick={empLoginCheck}>
+        <button onClick={empLoginCheck}>
           SUBMIT
         </button>
       </form>

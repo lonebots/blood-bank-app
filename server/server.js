@@ -14,6 +14,8 @@ var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler"
 var EmployeeRegisterHandler = require("./controllers/employee/EmployeeRegisterHandler");
 var UpdateBlood = require("./controllers/bloodbank/UpdateStockHandler");
 var UpdateHealthHandler = require("./controllers/bloodbank/UpdateHealthHandler");
+var HandleRequestHandler =require('./controllers/bloodbank/HandleRequestHandler')
+
 
 //dashboard
 var dashboardHandler = require("./controllers/dashboard/dashboardHandler");
@@ -45,6 +47,7 @@ RequestClassHandler(app,db);
 EmployeeRegisterHandler(app, db);
 EmployeeLoginHandler(app, db);
 UpdateHealthHandler(app, db);
+HandleRequestHandler(app,db);
 
 //bloodbank functionalities
 dashboardHandler(app, db);
