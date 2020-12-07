@@ -35,6 +35,7 @@ const EmployeeRegister = () => {
     <div className="emp-register">
       <h2>EMP Register</h2>
       <form className="empReg-form">
+        
         <input
           name="empName"
           type="text "

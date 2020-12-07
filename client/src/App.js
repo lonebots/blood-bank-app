@@ -15,6 +15,9 @@ import Donate from "./components/layout/Donate";
 import Search from "./components/bloodbank/Search";
 import Request from './components/bloodbank/Request'
 
+//
+import RequestClass from './components/bloodbank/RequestClass'
+
 //css
 import "./App.css";
 
@@ -35,6 +38,9 @@ function App() {
         <Route exact path="/login/emp/uh" component={UpdateHealth} />
         <Route exact path="/home/search/blood" component={Search} />
       <Route exact path="/login/usr/dash/req" component={Request}/>
+      
+  
+      <Route exact path="/request" component={RequestClass}/>
       </Switch>
     </div>
   );

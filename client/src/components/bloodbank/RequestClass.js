@@ -1,12 +1,18 @@
 import React, { Component } from "react";
+import Axios from 'axios'
 
 export default class RequestClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
       bloodGroup: [],
+      
     };
+ this.selectBlood=this.selectBlood.bind(this);  
+ this.request=this.request.bind(this);
   }
+ 
+
   componentDidMount() {
     this.setState({
       bloodGroup: [
@@ -23,6 +29,19 @@ export default class RequestClass extends Component {
     });
   }
 
+selectBlood=(e)=>{
+  var index=e.target.value;
+    //let blood=e.targ;
+    return(index);
+   // console.log(`blood : ${blood}`);
+}
+
+  request=()=>{
+   
+    console.log("blood :"+this.selectBlood)
+    alert("hahahaah")
+  }
+
   render() {
     const { bloodGroup } = this.state;
 
@@ -30,7 +49,7 @@ export default class RequestClass extends Component {
       bloodGroup.length > 0 &&
       bloodGroup.map((blood, i) => {
         return (
-          <option key={i} value={blood.id}>
+          <option key={i} value={blood.name}>
             {blood.name}
           </option>
         );
@@ -39,9 +58,11 @@ export default class RequestClass extends Component {
     return (
       <div className="request">
         <form>
-            <select>
+            <select onChange={this.selectBlood}>
                 {bloodGroupList}
             </select>
+            <input type="number" placeholder="UNIT"/>
+            <button onClick={this.request} >REQUEST</button>
         </form>
       </div>
     );
