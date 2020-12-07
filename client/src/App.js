@@ -13,10 +13,10 @@ import UpdateStock from "./components/bloodbank/UpdateStock";
 import UpdateHealth from "./components/bloodbank/UpdateHealth";
 import Donate from "./components/layout/Donate";
 import Search from "./components/bloodbank/Search";
-import Request from './components/bloodbank/Request'
+import Request from "./components/bloodbank/Request";
 
 //
-import RequestClass from './components/bloodbank/RequestClass'
+import RequestClass from "./components/bloodbank/RequestClass";
 
 //css
 import "./App.css";
@@ -37,10 +37,8 @@ function App() {
         <Route exact path="/login/emp/ub" component={UpdateStock} />
         <Route exact path="/login/emp/uh" component={UpdateHealth} />
         <Route exact path="/home/search/blood" component={Search} />
-      <Route exact path="/login/usr/dash/req" component={Request}/>
-      
-  
-      <Route exact path="/request" component={RequestClass}/>
+        <Route exact path="/request" component={RequestClass} />
+        {/* <Route exact path="/login/usr/dash/req" component={Request}/> */}
       </Switch>
     </div>
   );

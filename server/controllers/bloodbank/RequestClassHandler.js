@@ -32,6 +32,6 @@ module.exports = (app, db) => {
         }
       }
     });
-    console.log("finished");
+    
   });
 };

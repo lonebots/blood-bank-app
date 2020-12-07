@@ -12,15 +12,15 @@ const UserDashboard = () => {
       window.location='/request'
   }
 
-  const update=()=>{
+  // const update=()=>{
     
-  }
+  // }
 
   return (
     <div className="user-dash">
       <button onClick={donate}>DONATE</button>
       <button onClick={request}>REQUEST</button>
-      <button on onClick={update}>UPDATE</button>
+      {/* <button on onClick={update}>UPDATE</button> */}
     </div>
   );
 };
