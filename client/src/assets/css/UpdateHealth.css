@@ -61,7 +61,8 @@
   }
 
 .updatehealth button{
-  width: 5em;
+  width: 10em;
+  height: 30px;
   justify-self: center;
 }
 

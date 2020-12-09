@@ -25,7 +25,7 @@ const EmployeeRegister = () => {
       empUserName: empUserName,
       empPassword: empPassword,
     }).then((response)=>{
-      console.log(response)
+      alert(response.data.message)
     });
     
   

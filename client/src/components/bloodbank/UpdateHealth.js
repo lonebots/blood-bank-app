@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 //css
-import "../../assets/css/UpdateHealth.css";
+import '../../assets/css/UpdateHealth.css'
 
 const UpdateHealth = () => {
   var [userId, setuserId] = useState("");
@@ -29,7 +29,7 @@ const UpdateHealth = () => {
       userWeight: userWeight,
       userStatus: userStatus,
     }).then((response) => {
-      console.log(response.data);
+      alert(response.data.message);
     });
   };
 
