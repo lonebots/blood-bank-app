@@ -38,6 +38,7 @@ module.exports = (app, db) => {
         if (err) {
           console.log("** ERROR **" + err);
         } else {
+          res.send({message:"HEALTH UPDATED SUCCESSFULLY!"})
           console.log("**SUCCESSFULL UPDATE**");
         }
       }

@@ -28,7 +28,6 @@ module.exports = (app, db) => {
         if (err) {
           console.log(err + "THAT'S AN ERROR!!!");
         } else {
-          console.log("poda patti");
           var emp_id = result.insertId;
           //
           db.query(
@@ -41,11 +40,13 @@ module.exports = (app, db) => {
                 db.query(sqlDelete, [emp_id], (err, result2) => {
                   if (err) console.log(err);
                   else {
-                    console.log("hi");
+                    console.log("user already exists!");
+                    res.send({message:"USER ALREADY EXISTS!"})
                   }
                 });
               } else {
                 console.log("Employee Registered Successfully");
+                res.send({message:"EMPLOYEE REGISTRATION SUCCESSFULL!"})
               }
             }
           );
