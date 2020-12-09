@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 //css
-import '../../assets/css/HandleRequest.css'
+import "../../assets/css/HandleRequest.css";
 
 const HandleRequest = () => {
   //Variables
@@ -18,15 +18,16 @@ const HandleRequest = () => {
     });
   });
 
-
   //
-  const serveRequest=()=>{
-        Axios.delete("http://localhost:3001/login/emp/hr/accept").then((response)=>{
-            if(response.data.message){
-                alert(response.data.message);
-            }
-        })
-  }
+  const serveRequest = (req_id) => {
+    //console.log(`request id : ${req_id}`);
+const delUrl = "http://localhost:3001/login/emp/hr/"+req_id;
+    Axios.delete( delUrl).then((response) => {
+      if (response.data.message) {
+        alert(response.data.message);
+      }
+    });
+  };
   return (
     <div className="handle-request">
       <h1>REQUEST TABLE</h1>
@@ -43,7 +44,13 @@ const HandleRequest = () => {
                 <td>{request.req_id}</td>
                 <td>{request.blood_group}</td>
                 <td>{request.unit}</td>
-                <button onClick={()}>ACCEPT/SERVE</button>
+                <button
+                  onClick={() => {
+                    serveRequest(request.req_id);
+                  }}
+                >
+                  ACCEPT/SERVE
+                </button>
               </tr>
             );
           })}

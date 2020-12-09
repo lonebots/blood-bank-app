@@ -4,14 +4,24 @@
     flex-direction: column; 
     align-items: center;
     padding-top: 6em;
-    font-size: 20px;
+    font-size: 25px;
 }
 .req-table th{
     padding-left: 1em;
     padding-right: 1em;
+    font-size: 30px;
 }
 .req-table td{
     padding-left: 1em;
     padding-right: 1em;
     border:1px solid black;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+}
+.req-table button{
+    height: 48px;
+    margin-left: 1em;
 }
