@@ -7,12 +7,12 @@
 
 .dashboard h1 {
   font-family: monospace;
-  font-size: 45px;
+  font-size: 55px;
   color: rgb(165, 59, 59);
 }
 
 .blood-table th {
-  font-size: 25px;
+  font-size: 30px;
   font-family: monospace;
   padding-left: 1em;
   padding-right: 1em;

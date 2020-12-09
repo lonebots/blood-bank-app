@@ -29,8 +29,8 @@ const Dashboard = () => {
       <table className="blood-table">
         <thead>
           <tr>
-            <th>Blood Group</th>
-            <th>Unit </th>
+            <th>BLOOD GROUP</th>
+            <th>UNIT</th>
           </tr>
         </thead>
         <tbody>
