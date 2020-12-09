@@ -147,3 +147,21 @@ INSERT INTO `bbms`.`user_login` (`user_id`, `userUserName`, `userPassword`) VALU
 INSERT INTO `bbms`.`user_login` (`user_id`, `userUserName`, `userPassword`) VALUES ('13', 'akash', 'akash@123');
 INSERT INTO `bbms`.`user_login` (`user_id`, `userUserName`, `userPassword`) VALUES ('14', 'zidan', 'zidan@123');
 INSERT INTO `bbms`.`user_login` (`user_id`, `userUserName`, `userPassword`) VALUES ('15', 'akshay', 'akshay@123');
+
+
+/*adding dummy data to the user health table*/
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('1');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('2');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('3');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('4');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('5');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('6');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('7');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('8');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('9');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('10');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('11');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('12');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('13');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('14');
+INSERT INTO `bbms`.`user_health` (`user_id`) VALUES ('15');
