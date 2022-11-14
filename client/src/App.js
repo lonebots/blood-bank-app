@@ -1,12 +1,12 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import Dashboard from "./components/layout/Dashboard";
-import UserLogin from "./components/user/UserLogin";
-import UserRegister from "./components/user/UserRegister";
-import EmployeeLogin from "./components/employee/EmployeeLogin";
-import EmployeRegister from "./components/employee/EmployeeRegister";
+import UserLogin from "./components/user/userLogin";
+import UserRegister from "./components/user/userRegister";
+import EmployeeLogin from "./components/employee/employeeLogin";
+import EmployeRegister from "./components/employee/employeeRegister";
 import UserDashboard from "./components/user/UserDashboard";
 import EmpDashboard from "./components/employee/EmpDarshboard";
 import UpdateStock from "./components/bloodbank/UpdateStock";
@@ -14,7 +14,7 @@ import UpdateHealth from "./components/bloodbank/UpdateHealth";
 import Donate from "./components/layout/Donate";
 import Search from "./components/bloodbank/Search";
 import HandleRequest from "./components/bloodbank/HandleRequest";
-import Request from "./components/bloodbank/Request";
+//import Request from "./components/bloodbank/Request";
 
 //
 import RequestClass from "./components/bloodbank/RequestClass";
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Switch>
+      <Routes>
         <Route exact path="/home" component={Dashboard} />
         <Route exact path="/donate" component={Donate} />
         <Route exact path="/login/usr" component={UserLogin} />
@@ -41,7 +41,7 @@ function App() {
         <Route exact path="/request" component={RequestClass} />
         <Route exact path="/login/emp/hr" component={HandleRequest} />
         {/* <Route exact path="/login/usr/dash/req" component={Request}/> */}
-      </Switch>
+      </Routes>
     </div>
   );
 }
