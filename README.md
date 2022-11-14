@@ -13,7 +13,7 @@ The Application was build using following technologies:
 - MySQL
 
 ## Diagrams
-<img src = "https://github.com/lonebots/blood-bank-app/blob/master/resources/bbms%20relational%20schema.png" alt = "schemadiagram" width = "300" /> <img src = "https://github.com/lonebots/blood-bank-app/blob/master/resources/bbms%20er%20diagram.png" alt = "erdiagram" width = "300" height = "302" />
+<img src = "https://github.com/lonebots/blood-bank-app/blob/master/resources/bbms%20relational%20schema.png" alt = "schemadiagram" width = "400" /> <img src = "https://github.com/lonebots/blood-bank-app/blob/master/resources/bbms%20er%20diagram.png" alt = "erdiagram" width = "400" height = "322" />
 
 ## Deployment
 
