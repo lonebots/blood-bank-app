@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
-import UserRegister from "../user/UserRegister";
-import UserLogin from "../user/UserLogin";
+import UserRegister from "../user/userRegister";
+import UserLogin from "../user/userLogin";
 
 //css
 import "../../assets/css/Donate.css";
@@ -17,10 +17,10 @@ const Donate = () => {
         <button>LOGIN</button>
       </Link>
 
-      <Switch>
+      <Routes>
         <Route path="/reg/usr" component={UserRegister} />
         <Route path="/login/usr" component={UserLogin} />
-      </Switch>
+      </Routes>
     </div>
   );
 };
