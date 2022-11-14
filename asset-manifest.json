@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/blood-bank-app/static/css/main.bc5dbdd2.css",
+    "main.js": "/blood-bank-app/static/js/main.d4415586.js",
+    "static/media/bdrop.png": "/blood-bank-app/static/media/bdrop.aecbfa45eb3b6c0aedd1.png",
+    "index.html": "/blood-bank-app/index.html",
+    "main.bc5dbdd2.css.map": "/blood-bank-app/static/css/main.bc5dbdd2.css.map",
+    "main.d4415586.js.map": "/blood-bank-app/static/js/main.d4415586.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc5dbdd2.css",
+    "static/js/main.d4415586.js"
+  ]
+}
