@@ -4,7 +4,7 @@
 A simple web application for managing a blood bank. The app delivers functionalities that makes it easy 
 for managment of a blood bank.
 
-![bloodbank live](https://github.com/lonebots/blood-bank-app/blob/master/resources/livedemobbms.png)
+![bloodbank live](resources/livedemobbms.png)
 
 The Application was build using following technologies: 
 - ReactJs
@@ -13,8 +13,9 @@ The Application was build using following technologies:
 - MySQL
 
 ## Diagrams
-- <img src = "https://github.com/lonebots/blood-bank-app/blob/master/resources/bbms%20relational%20schema.png" alt = "schema diagram" width = "400" /> 
-- <img src = "https://github.com/lonebots/blood-bank-app/blob/master/resources/bbms%20er%20diagram.png" alt = "ER diagram" width = "400" height = "322" />
+<p align="center">
+<img src = "resources/bbms%20relational%20schema.png" alt = "schema diagram" width = "350" /> <img src = "resources/bbms%20er%20diagram.png" alt = "ER diagram" width = "350" height = "322" />
+</p>
 
 ## Deployment
 
