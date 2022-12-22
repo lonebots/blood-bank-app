@@ -10,7 +10,7 @@
   "author": "jishnu",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "alert": "^5.0.6",
