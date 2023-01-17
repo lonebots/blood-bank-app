@@ -22,7 +22,7 @@ const Search = () => {
         setsearchList(response.data);
       }
     });
-  });
+  },[blood, place]);
 
   //returning
   return (
