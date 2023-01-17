@@ -14,13 +14,11 @@ const Dashboard = () => {
 
   //useEffect call
   useEffect(() => {
-    Axios.get("http://localhost:3001/home", (req, res) => {}).then(
-      (response) => {
-        //console.log(response.data);
-        setbloodTable(response.data);
-        console.log(bloodTable)
-      }
-    );
+    Axios.get("http://localhost:3001/home", (req, res) => {
+      console.log(res.data);
+      setbloodTable(res.data);
+      console.log(bloodTable)
+    })
   });
 
   return (
