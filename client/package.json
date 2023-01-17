@@ -1,6 +1,6 @@
 {
   "name": "bbms",
-  "homepage": "https://lonebots.github.io/blood-bank-app",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
