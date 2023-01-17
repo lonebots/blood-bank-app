@@ -33,15 +33,17 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-//config for database
-var db = mysql.createPool({
+var db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Password@123",
   database: "bbms",
-  // multipleStatements: true,
-}, () => {
-  console.log('database connection successful')
+
+});
+
+db.connect(function (err) {
+  if (err) throw err;
+  console.log("Connected!");
 });
 
 //user functionalities
