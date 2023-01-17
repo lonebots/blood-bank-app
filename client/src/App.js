@@ -27,20 +27,20 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route exact path="/home" component={Dashboard} />
-        <Route exact path="/donate" component={Donate} />
-        <Route exact path="/login/usr" component={UserLogin} />
-        <Route exact path="/login/emp" component={EmployeeLogin} />
-        <Route exact path="/reg/usr" component={UserRegister} />
-        <Route exact path="/reg/emp" component={EmployeRegister} />
-        <Route exact path="/login/usr/dash" component={UserDashboard} />
-        <Route exact path="/login/emp/dash" component={EmpDashboard} />
-        <Route exact path="/login/emp/ub" component={UpdateStock} />
-        <Route exact path="/login/emp/uh" component={UpdateHealth} />
-        <Route exact path="/home/search/blood" component={Search} />
-        <Route exact path="/request" component={RequestClass} />
-        <Route exact path="/login/emp/hr" component={HandleRequest} />
-        {/* <Route exact path="/login/usr/dash/req" component={Request}/> */}
+        <Route exact path="/home" element={<Dashboard />} />
+        <Route exact path="/donate" element={<Donate />} />
+        <Route exact path="/login/usr" element={<UserLogin />} />
+        <Route exact path="/login/emp" element={<EmployeeLogin />} />
+        <Route exact path="/reg/usr" element={<UserRegister />} />
+        <Route exact path="/reg/emp" element={<EmployeRegister />} />
+        <Route exact path="/login/usr/dash" element={<UserDashboard />} />
+        <Route exact path="/login/emp/dash" element={<EmpDashboard />} />
+        <Route exact path="/login/emp/ub" element={<UpdateStock />} />
+        <Route exact path="/login/emp/uh" element={<UpdateHealth />} />
+        <Route exact path="/home/search/blood" element={<Search />} />
+        <Route exact path="/request" element={<RequestClass />} />
+        <Route exact path="/login/emp/hr" element={<HandleRequest />} />
+        {/* <Route exact path="/login/usr/dash/req" element={Request}/> */}
       </Routes>
     </div>
   );
