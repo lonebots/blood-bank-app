@@ -18,6 +18,7 @@ const Dashboard = () => {
       (response) => {
         //console.log(response.data);
         setbloodTable(response.data);
+        console.log(bloodTable)
       }
     );
   });
@@ -34,7 +35,7 @@ const Dashboard = () => {
           </tr>
         </thead>
         <tbody>
-          {bloodTable.map((val) => {
+          {bloodTable.length > 0 && bloodTable.map((val) => {
             return (
               <tr key={val.b_id}>
                 <td>{val.blood_group}</td>
