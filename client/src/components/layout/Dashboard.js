@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import Footer from "./Footer";
 
 //css
@@ -14,12 +14,13 @@ const Dashboard = () => {
 
   //useEffect call
   useEffect(() => {
-    Axios.get("http://localhost:3001/home", (req, res) => {
-      console.log(res.data);
-      setbloodTable(res.data);
-      console.log(bloodTable)
-    })
-  });
+    axios
+      .get("http://localhost:3001/home")
+      .then(function (response) {
+        //console.log(response);
+        setbloodTable(response.data)
+      });
+  }, []);
 
   return (
     <div className="dashboard">
