@@ -1,5 +1,5 @@
 //moduleexport
-module.exports = (app, db) => {
+const UpdateHealthHandler = (app, db) => {
   app.post("/login/emp/uh", (req, res) => {
     //variables
     const user_id = req.body.userId;
@@ -45,3 +45,5 @@ module.exports = (app, db) => {
     );
   });
 };
+
+export default UpdateHealthHandler;

@@ -1,5 +1,5 @@
 //module export
-module.exports = (app, db) => {
+const UserRegisterHandler = (app, db) => {
   app.post("/reg/usr", (req, res) => {
     //variables
     const userFName = req.body.userFName;
@@ -83,3 +83,6 @@ module.exports = (app, db) => {
     );
   });
 };
+
+
+export default UserRegisterHandler;

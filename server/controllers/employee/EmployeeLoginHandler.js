@@ -1,8 +1,8 @@
-var bodyParser = require("body-parser");
+import bodyParser from "body-parser";
 var urlencodedParser = bodyParser.urlencoded({ extended: false }); //middileware
 
 //module export
-module.exports = (app, db) => {
+const EmployeeLoginHandler = (app, db) => {
   app.post("/login/emp", (req, res) => {
     //variables
     const userName = req.body.empUserName;
@@ -28,3 +28,5 @@ module.exports = (app, db) => {
     });
   });
 };
+
+export default EmployeeLoginHandler;

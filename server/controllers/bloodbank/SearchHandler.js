@@ -1,5 +1,5 @@
 //module export
-module.exports = (app, db) => {
+const SearchHandler = (app, db) => {
   app.post("/home/search", (req, res) => {
     //variables
     const blood = req.body.blood;
@@ -24,3 +24,5 @@ module.exports = (app, db) => {
     });
   });
 };
+
+export default SearchHandler;

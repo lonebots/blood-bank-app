@@ -1,5 +1,5 @@
-//module export
-module.exports = (app, db) => {
+
+const UserLoginHandler = (app, db) => {
   app.post("/login/usr", (req, res) => {
     //variables
     const userUserName = req.body.userUserName;
@@ -26,3 +26,5 @@ module.exports = (app, db) => {
     });
   });
 };
+
+export default UserLoginHandler;

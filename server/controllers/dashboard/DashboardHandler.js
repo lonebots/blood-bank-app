@@ -1,4 +1,5 @@
-module.exports = (app, db) => {
+
+const DashboardHandler = (app, db) => {
   app.get("/home", (req, res) => {
     //query
     const sqlSelect = "SELECT * from blood_stocks;";
@@ -10,3 +11,5 @@ module.exports = (app, db) => {
     });
   });
 };
+
+export default DashboardHandler;

@@ -1,5 +1,5 @@
 ///module export
-module.exports = (app, db) => {
+const RequestClassHandler = (app, db) => {
   app.post("/request", (req, res) => {
     const blood_group = req.body.blood_group;
     const unit = req.body.unit;
@@ -35,3 +35,5 @@ module.exports = (app, db) => {
     
   });
 };
+
+export default RequestClassHandler;

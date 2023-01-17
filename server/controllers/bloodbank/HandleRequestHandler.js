@@ -1,7 +1,4 @@
-const { json } = require("body-parser");
-
-//module exports
-module.exports = (app, db) => {
+const HandleRequestHandler = (app, db) => {
   app.get("/login/emp/hr", (req, res) => {
     //query
     const sqlSelect = "SELECT * FROM user_request";
@@ -69,3 +66,5 @@ module.exports = (app, db) => {
     });
   });
 };
+
+export default HandleRequestHandler;

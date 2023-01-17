@@ -1,7 +1,7 @@
 //var popup =require('popups')
 
 //module export
-module.exports = (app, db) => {
+const EmployeeRegisterHandler = (app, db) => {
   app.post("/reg/emp", (req, res) => {
     //variables
     const empName = req.body.empName;
@@ -41,12 +41,12 @@ module.exports = (app, db) => {
                   if (err) console.log(err);
                   else {
                     console.log("user already exists!");
-                    res.send({message:"USER ALREADY EXISTS!"})
+                    res.send({ message: "USER ALREADY EXISTS!" })
                   }
                 });
               } else {
                 console.log("Employee Registered Successfully");
-                res.send({message:"EMPLOYEE REGISTRATION SUCCESSFULL!"})
+                res.send({ message: "EMPLOYEE REGISTRATION SUCCESSFULL!" })
               }
             }
           );
@@ -55,3 +55,6 @@ module.exports = (app, db) => {
     );
   });
 };
+
+
+export default EmployeeRegisterHandler;

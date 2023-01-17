@@ -1,25 +1,29 @@
-var mysql = require("mysql");
-var express = require("express");
-var bodyParser = require("body-parser");
-var cors = require("cors");
+
+
+import mysql from 'mysql'
+import express from 'express'
+import bodyParser from 'body-parser';
+import cors from 'cors'
+
 
 //controllers
 //user function handlers
-var UserLoginHandler = require("./controllers/user/UserLoginHandler");
-var UserRegisterHandler = require("./controllers/user/UserRegisterHandler");
-var RequestClassHandler =require("./controllers/bloodbank/RequestClassHandler")
+import UserLoginHandler from "./controllers/user/userLoginHandler.js";
+import UserRegisterHandler from './controllers/user/UserRegisterHandler.js';
+import RequestClassHandler from './controllers/bloodbank/RequestClassHandler.js';
+
+
 
 //employee function handlers
-var EmployeeLoginHandler = require("./controllers/employee/EmployeeLoginHandler");
-var EmployeeRegisterHandler = require("./controllers/employee/EmployeeRegisterHandler");
-var UpdateBlood = require("./controllers/bloodbank/UpdateStockHandler");
-var UpdateHealthHandler = require("./controllers/bloodbank/UpdateHealthHandler");
-var HandleRequestHandler =require('./controllers/bloodbank/HandleRequestHandler')
-
+import EmployeeLoginHandler from './controllers/employee/EmployeeLoginHandler.js';
+import EmployeeRegisterHandler from './controllers/employee/EmployeeRegisterHandler.js';
+import UpdateBlood from './controllers/bloodbank/UpdateStockHandler.js'
+import UpdateHealthHandler from './controllers/bloodbank/UpdateHealthHandler.js';
+import HandleRequestHandler from './controllers/bloodbank/HandleRequestHandler.js';
 
 //dashboard
-var dashboardHandler = require("./controllers/dashboard/dashboardHandler");
-var SearchHandler = require("./controllers/bloodbank/SearchHandler");
+import DashboardHandler from './controllers/dashboard/DashboardHandler.js';
+import SearchHandler from './controllers/bloodbank/SearchHandler.js';
 
 //create the app
 var app = express();
@@ -33,24 +37,26 @@ app.use(express.json());
 var db = mysql.createPool({
   host: "localhost",
   user: "root",
-  password: "password",
+  password: "Password@123",
   database: "bbms",
   // multipleStatements: true,
+}, () => {
+  console.log('database connection successful')
 });
 
 //user functionalities
 UserRegisterHandler(app, db);
 UserLoginHandler(app, db);
-RequestClassHandler(app,db);
+RequestClassHandler(app, db);
 
 //employee functionalities
 EmployeeRegisterHandler(app, db);
 EmployeeLoginHandler(app, db);
 UpdateHealthHandler(app, db);
-HandleRequestHandler(app,db);
+HandleRequestHandler(app, db);
 
 //bloodbank functionalities
-dashboardHandler(app, db);
+DashboardHandler(app, db);
 UpdateBlood(app, db);
 SearchHandler(app, db);
 
