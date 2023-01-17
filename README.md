@@ -87,3 +87,9 @@ Please adhere to this project's `code of conduct`.
 
 - [@lonebots](https://www.github.com/lonebots)
 
+<br/>
+<br/>
+
+<p align=center>
+<b>Made with ❤️ | leave a ⭐ if you loved the project</b>
+</p>
