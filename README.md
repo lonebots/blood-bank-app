@@ -91,10 +91,8 @@ Please adhere to this project's `code of conduct`.
 <br/>
 <p align=center>
 <b>Made with ❤️ | leave a ⭐ if you loved the project</b>
-
-<a href="https://www.buymeacoffee.com/lonebots"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=lonebots&button_colour=40DCA5&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
-
-
+<br/>
+<br/>
+<br/>
+<a href="https://www.buymeacoffee.com/lonebots"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=lonebots&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
 </p>
-
-
