@@ -56,16 +56,16 @@ To start the server
 
 ```bash
   cd server             
-  npm install 
-  npm devStart          
+  yarn install 
+  yarn devStart          
 ```
 
 To start the client
 
 ```bash
   cd client
-  npm install
-  npm start
+  yarn install
+  yarn start
 ```
 
 
